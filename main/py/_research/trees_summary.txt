@@ -1,0 +1,153 @@
+rows=32  datasets=['cci_a1sd', 'cci_a1sd_binary', 'ddos_pcap', 'vran_computing']  models=['lightgbm', 'random_forest', 'xgboost']
+rows without agreement metrics: 0  []
+
+== A · timing: our sampling KernelSHAP vs the exact reference (ms/sample, larger n) ==
+dataset          model         reference              space               ours     exact    ratio
+cci_a1sd         random_forest TreeSHAP(path)         proba              60.85     2.281     26.7
+cci_a1sd         random_forest TreeSHAP(inter)        proba              60.85     8.912      6.8
+cci_a1sd         xgboost       TreeSHAP(path)         margin              1.95     0.693      2.8
+cci_a1sd         xgboost       TreeSHAP(inter)        margin              1.95     9.132      0.2
+cci_a1sd         xgboost       xgb pred_contribs      margin              1.95     0.075     26.0
+cci_a1sd         lightgbm      TreeSHAP(path)         margin              3.76     1.758      2.1
+cci_a1sd         lightgbm      TreeSHAP(inter)        proba               3.76    18.639      0.2
+cci_a1sd         lightgbm      lgb pred_contrib       margin              3.76     0.328     11.5
+cci_a1sd_binary  random_forest TreeSHAP(path)         proba              57.58     0.053   1087.4
+cci_a1sd_binary  random_forest TreeSHAP(inter)        proba              57.58     0.420    137.1
+cci_a1sd_binary  xgboost       TreeSHAP(path)         margin              1.37     0.093     14.7
+cci_a1sd_binary  xgboost       TreeSHAP(inter)        proba               1.37     0.171      8.0
+cci_a1sd_binary  xgboost       xgb pred_contribs      margin              1.37     0.011    120.7
+cci_a1sd_binary  lightgbm      TreeSHAP(path)         margin              1.68     0.481      3.5
+cci_a1sd_binary  lightgbm      TreeSHAP(inter)        proba               1.68     1.908      0.9
+cci_a1sd_binary  lightgbm      lgb pred_contrib       margin              1.68     0.101     16.7
+vran_computing   random_forest TreeSHAP(path)         proba              61.77     3.836     16.1
+vran_computing   random_forest TreeSHAP(inter)        proba              61.77    18.515      3.4
+vran_computing   xgboost       TreeSHAP(path)         margin              1.39     0.140     10.0
+vran_computing   xgboost       TreeSHAP(inter)        proba               1.39     1.783      0.8
+vran_computing   xgboost       xgb pred_contribs      margin              1.39     0.071     19.5
+vran_computing   lightgbm      TreeSHAP(path)         margin              1.99     0.837      2.4
+vran_computing   lightgbm      TreeSHAP(inter)        proba               1.99     5.523      0.5
+vran_computing   lightgbm      lgb pred_contrib       margin              1.99     0.174     11.4
+ddos_pcap        random_forest TreeSHAP(path)         proba              54.55     0.247    220.5
+ddos_pcap        random_forest TreeSHAP(inter)        proba              54.55     0.962     56.7
+ddos_pcap        xgboost       TreeSHAP(path)         margin              2.08     1.762      1.2
+ddos_pcap        xgboost       TreeSHAP(inter)        margin              2.08     2.752      0.8
+ddos_pcap        xgboost       xgb pred_contribs      margin              2.08     0.116     17.9
+ddos_pcap        lightgbm      TreeSHAP(path)         margin              1.45     0.661      2.2
+ddos_pcap        lightgbm      TreeSHAP(inter)        proba               1.45     1.610      1.0
+ddos_pcap        lightgbm      lgb pred_contrib       margin              1.45     0.017     83.6
+ratio ours/exact: min 0.2x  median 10.0x  max 1087.4x  n=32  rows with ratio<1: 6
+
+== B · agreement (per-sample cosine / sign / global rank / Top-3) ==
+dataset          model         reference              space              cos    sign     rho   top3 baseDiff
+cci_a1sd         random_forest TreeSHAP(path)         proba            0.836   0.742   0.879   1.00   0.1624
+cci_a1sd         random_forest TreeSHAP(inter)        proba            0.847   0.746   0.879   1.00   0.0000
+cci_a1sd         xgboost       TreeSHAP(path)         margin           0.722   0.713   0.430   0.67   1.4151
+cci_a1sd         xgboost       TreeSHAP(inter)        margin           0.745   0.738   0.576   0.67   0.7973
+cci_a1sd         xgboost       xgb pred_contribs      margin           0.722   0.713   0.430   0.67   1.4151
+cci_a1sd         lightgbm      TreeSHAP(path)         margin           0.677   0.679   0.709   0.67   4.3218
+cci_a1sd         lightgbm      TreeSHAP(inter)        proba            0.684   0.679   0.673   0.67   0.0003
+cci_a1sd         lightgbm      lgb pred_contrib       margin           0.677   0.679   0.709   0.67   4.3218
+cci_a1sd_binary  random_forest TreeSHAP(path)         proba            0.862   0.671   0.697   1.00   0.0544
+cci_a1sd_binary  random_forest TreeSHAP(inter)        proba            0.882   0.679   0.709   1.00   0.0000
+cci_a1sd_binary  xgboost       TreeSHAP(path)         margin           0.872   0.629   0.661   1.00   0.5942
+cci_a1sd_binary  xgboost       TreeSHAP(inter)        proba            0.873   0.575   0.685   1.00   0.0000
+cci_a1sd_binary  xgboost       xgb pred_contribs      margin           0.872   0.629   0.661   1.00   0.5942
+cci_a1sd_binary  lightgbm      TreeSHAP(path)         margin           0.811   0.637   0.806   1.00   0.7207
+cci_a1sd_binary  lightgbm      TreeSHAP(inter)        proba            0.832   0.613   0.770   1.00   0.0000
+cci_a1sd_binary  lightgbm      lgb pred_contrib       margin           0.811   0.637   0.806   1.00   0.7207
+vran_computing   random_forest TreeSHAP(path)         proba            0.836   0.792   0.964   1.00   0.0180
+vran_computing   random_forest TreeSHAP(inter)        proba            0.880   0.899   0.929   1.00   0.0000
+vran_computing   xgboost       TreeSHAP(path)         margin           0.734   0.780   0.679   0.67   3.3600
+vran_computing   xgboost       TreeSHAP(inter)        proba            0.737   0.774   0.786   0.67   0.0000
+vran_computing   xgboost       xgb pred_contribs      margin           0.734   0.780   0.679   0.67   3.3600
+vran_computing   lightgbm      TreeSHAP(path)         margin           0.562   0.685   0.857   0.67  12.2504
+vran_computing   lightgbm      TreeSHAP(inter)        proba            0.640   0.720   0.821   0.67   0.0000
+vran_computing   lightgbm      lgb pred_contrib       margin           0.562   0.685   0.857   0.67  12.2504
+ddos_pcap        random_forest TreeSHAP(path)         proba            0.549   0.526   0.714   1.00   0.0032
+ddos_pcap        random_forest TreeSHAP(inter)        proba            0.561   0.536   0.712   1.00   0.0000
+ddos_pcap        xgboost       TreeSHAP(path)         margin           0.298   0.260   0.523   0.33   0.9641
+ddos_pcap        xgboost       TreeSHAP(inter)        margin           0.326   0.262   0.537   0.33   1.6000
+ddos_pcap        xgboost       xgb pred_contribs      margin           0.298   0.260   0.523   0.33   0.9641
+ddos_pcap        lightgbm      TreeSHAP(path)         margin           0.261   0.336   0.013   0.33   6.4952
+ddos_pcap        lightgbm      TreeSHAP(inter)        proba            0.325   0.357  -0.014   0.33   0.0027
+ddos_pcap        lightgbm      lgb pred_contrib       margin           0.261   0.336   0.013   0.33   6.4952
+
+== C · additivity residual |base + sum(phi) - target| (mean over explained rows) ==
+dataset          model         reference              space    ours(proba)     ref(own)   ref(proba)
+cci_a1sd         random_forest TreeSHAP(path)         proba      0.00e+00     0.00e+00     0.00e+00
+cci_a1sd         random_forest TreeSHAP(inter)        proba      0.00e+00     0.00e+00     0.00e+00
+cci_a1sd         xgboost       TreeSHAP(path)         margin     0.00e+00     0.00e+00     4.53e+00
+cci_a1sd         xgboost       TreeSHAP(inter)        margin     0.00e+00     0.00e+00     4.53e+00
+cci_a1sd         xgboost       xgb pred_contribs      margin     0.00e+00     0.00e+00     4.53e+00
+cci_a1sd         lightgbm      TreeSHAP(path)         margin     0.00e+00     0.00e+00     8.15e+00
+cci_a1sd         lightgbm      TreeSHAP(inter)        proba      0.00e+00     3.30e-04     3.30e-04
+cci_a1sd         lightgbm      lgb pred_contrib       margin     0.00e+00     0.00e+00     8.15e+00
+cci_a1sd_binary  random_forest TreeSHAP(path)         proba      0.00e+00     0.00e+00     0.00e+00
+cci_a1sd_binary  random_forest TreeSHAP(inter)        proba      0.00e+00     0.00e+00     0.00e+00
+cci_a1sd_binary  xgboost       TreeSHAP(path)         margin     0.00e+00     0.00e+00     7.15e+00
+cci_a1sd_binary  xgboost       TreeSHAP(inter)        proba      0.00e+00     0.00e+00     0.00e+00
+cci_a1sd_binary  xgboost       xgb pred_contribs      margin     0.00e+00     0.00e+00     7.15e+00
+cci_a1sd_binary  lightgbm      TreeSHAP(path)         margin     0.00e+00     0.00e+00     1.43e+01
+cci_a1sd_binary  lightgbm      TreeSHAP(inter)        proba      0.00e+00     0.00e+00     0.00e+00
+cci_a1sd_binary  lightgbm      lgb pred_contrib       margin     0.00e+00     0.00e+00     1.43e+01
+vran_computing   random_forest TreeSHAP(path)         proba      0.00e+00     0.00e+00     0.00e+00
+vran_computing   random_forest TreeSHAP(inter)        proba      0.00e+00     8.30e-04     8.30e-04
+vran_computing   xgboost       TreeSHAP(path)         margin     0.00e+00     0.00e+00     7.33e+00
+vran_computing   xgboost       TreeSHAP(inter)        proba      0.00e+00     0.00e+00     0.00e+00
+vran_computing   xgboost       xgb pred_contribs      margin     0.00e+00     0.00e+00     7.33e+00
+vran_computing   lightgbm      TreeSHAP(path)         margin     0.00e+00     0.00e+00     1.17e+01
+vran_computing   lightgbm      TreeSHAP(inter)        proba      0.00e+00     0.00e+00     0.00e+00
+vran_computing   lightgbm      lgb pred_contrib       margin     0.00e+00     0.00e+00     1.17e+01
+ddos_pcap        random_forest TreeSHAP(path)         proba      0.00e+00     0.00e+00     0.00e+00
+ddos_pcap        random_forest TreeSHAP(inter)        proba      0.00e+00     0.00e+00     0.00e+00
+ddos_pcap        xgboost       TreeSHAP(path)         margin     0.00e+00     0.00e+00     1.59e+00
+ddos_pcap        xgboost       TreeSHAP(inter)        margin     0.00e+00     0.00e+00     1.59e+00
+ddos_pcap        xgboost       xgb pred_contribs      margin     0.00e+00     0.00e+00     1.59e+00
+ddos_pcap        lightgbm      TreeSHAP(path)         margin     0.00e+00     0.00e+00     6.53e+00
+ddos_pcap        lightgbm      TreeSHAP(inter)        proba      0.00e+00     9.83e-03     9.83e-03
+ddos_pcap        lightgbm      lgb pred_contrib       margin     0.00e+00     0.00e+00     6.53e+00
+
+== D · ranges by reference family (three different estimators, keep them apart) ==
+TreeSHAP interventional    n=12  cos 0.325..0.882 (mean 0.694) | sign 0.262..0.899 (mean 0.631) | rho -0.014..0.929 (mean 0.672) | top3 0.333..1.000 (mean 0.778)
+                             ratio ours/exact 0.2x..137.1x (median 1.0x, ours faster in 6/12)
+TreeSHAP path-dependent    n=12  cos 0.261..0.872 (mean 0.668) | sign 0.260..0.792 (mean 0.621) | rho 0.013..0.964 (mean 0.661) | top3 0.333..1.000 (mean 0.778)
+                             ratio ours/exact 1.2x..1087.4x (median 10.0x, ours faster in 0/12)
+lgb pred_contrib           n=4   cos 0.261..0.811 (mean 0.578) | sign 0.336..0.685 (mean 0.584) | rho 0.013..0.857 (mean 0.596) | top3 0.333..1.000 (mean 0.667)
+                             ratio ours/exact 11.4x..83.6x (median 16.7x, ours faster in 0/4)
+xgb pred_contribs          n=4   cos 0.298..0.872 (mean 0.656) | sign 0.260..0.780 (mean 0.595) | rho 0.430..0.679 (mean 0.573) | top3 0.333..1.000 (mean 0.667)
+                             ratio ours/exact 17.9x..120.7x (median 26.0x, ours faster in 0/4)
+
+== E · comparability guard: rows whose reference lives in margin space ==
+(magnitude metrics comparable only in proba space; sign/rank stay valid under a monotone link)
+  cci_a1sd         xgboost       TreeSHAP(path)         fit 0.49s acc 0.9917 | probability output unavailable (ValueError) | r
+  cci_a1sd         xgboost       TreeSHAP(inter)        fit 0.49s acc 0.9917 | probability output unavailable (Exception) | ra
+  cci_a1sd         xgboost       xgb pred_contribs      fit 0.49s acc 0.9917 | xgb contribs (24, 3, 11) | ratio@n=200
+  cci_a1sd         lightgbm      TreeSHAP(path)         fit 1.41s acc 0.9917 | probability output unavailable (ValueError) | r
+  cci_a1sd         lightgbm      lgb pred_contrib       fit 1.41s acc 0.9917 | lgb contribs (24, 33) | ratio@n=200
+  cci_a1sd_binary  xgboost       TreeSHAP(path)         fit 0.15s acc 1.0000 | probability output unavailable (ValueError) | r
+  cci_a1sd_binary  xgboost       xgb pred_contribs      fit 0.15s acc 1.0000 | xgb contribs (24, 11) | ratio@n=200
+  cci_a1sd_binary  lightgbm      TreeSHAP(path)         fit 0.17s acc 1.0000 | probability output unavailable (ValueError) | r
+  cci_a1sd_binary  lightgbm      lgb pred_contrib       fit 0.17s acc 1.0000 | lgb contribs (24, 11) | ratio@n=200
+  vran_computing   xgboost       TreeSHAP(path)         fit 0.28s acc 0.9650 | probability output unavailable (ValueError) | r
+  vran_computing   xgboost       xgb pred_contribs      fit 0.28s acc 0.9650 | xgb contribs (24, 8) | ratio@n=200
+  vran_computing   lightgbm      TreeSHAP(path)         fit 0.24s acc 0.9617 | probability output unavailable (ValueError) | r
+  vran_computing   lightgbm      lgb pred_contrib       fit 0.24s acc 0.9617 | lgb contribs (24, 8) | ratio@n=200
+  ddos_pcap        xgboost       TreeSHAP(path)         fit 0.21s acc 1.0000 | probability output unavailable (ValueError) | r
+  ddos_pcap        xgboost       TreeSHAP(inter)        fit 0.21s acc 1.0000 | probability output unavailable (Exception) | ra
+  ddos_pcap        xgboost       xgb pred_contribs      fit 0.21s acc 1.0000 | xgb contribs (20, 3, 22) | ratio@n=20
+  ddos_pcap        lightgbm      TreeSHAP(path)         fit 0.04s acc 1.0000 | probability output unavailable (ValueError) | r
+  ddos_pcap        lightgbm      lgb pred_contrib       fit 0.04s acc 1.0000 | lgb contribs (20, 66) | ratio@n=20
+
+== F · implementation scale (why the timing gap looks like that) ==
+  cci_a1sd         random_forest d=10  trees=150.00000 coalitions=48.00000 fwd/sample=384.00000 fit 0.23s acc 0.9933 | ratio@n=200
+  cci_a1sd         xgboost       d=10  trees=200.00000 coalitions=48.00000 fwd/sample=384.00000 fit 0.49s acc 0.9917 | probability outpu
+  cci_a1sd         lightgbm      d=10  trees=200.00000 coalitions=48.00000 fwd/sample=384.00000 fit 1.41s acc 0.9917 | probability outpu
+  cci_a1sd_binary  random_forest d=10  trees=150.00000 coalitions=48.00000 fwd/sample=384.00000 fit 0.21s acc 1.0000 | ratio@n=200
+  cci_a1sd_binary  xgboost       d=10  trees=200.00000 coalitions=48.00000 fwd/sample=384.00000 fit 0.15s acc 1.0000 | probability outpu
+  cci_a1sd_binary  lightgbm      d=10  trees=200.00000 coalitions=48.00000 fwd/sample=384.00000 fit 0.17s acc 1.0000 | probability outpu
+  vran_computing   random_forest d=7   trees=150.00000 coalitions=48.00000 fwd/sample=384.00000 fit 0.22s acc 0.9617 | ratio@n=200
+  vran_computing   xgboost       d=7   trees=200.00000 coalitions=48.00000 fwd/sample=384.00000 fit 0.28s acc 0.9650 | probability outpu
+  vran_computing   lightgbm      d=7   trees=200.00000 coalitions=48.00000 fwd/sample=384.00000 fit 0.24s acc 0.9617 | probability outpu
+  ddos_pcap        random_forest d=21  trees=150.00000 coalitions=50.00000 fwd/sample=400.00000 fit 0.18s acc 1.0000 | ratio@n=20
+  ddos_pcap        xgboost       d=21  trees=200.00000 coalitions=50.00000 fwd/sample=400.00000 fit 0.21s acc 1.0000 | probability outpu
+  ddos_pcap        lightgbm      d=21  trees=200.00000 coalitions=50.00000 fwd/sample=400.00000 fit 0.04s acc 1.0000 | probability outpu

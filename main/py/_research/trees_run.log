@@ -1,0 +1,37 @@
+== cci_a1sd  task=multiclass  n=4000/600  d=10  K=3
+cci_a1sd         random_forest TreeSHAP(path)         proba          cos=0.836 sign=0.742 rho=0.879 top3=1.00 | ours   60.85  ref    2.28 ms/sample (n=200)  x26.6776
+cci_a1sd         random_forest TreeSHAP(inter)        proba          cos=0.847 sign=0.746 rho=0.879 top3=1.00 | ours   60.85  ref    8.91 ms/sample (n=200)  x6.82838
+cci_a1sd         xgboost       TreeSHAP(path)         margin         cos=0.722 sign=0.713 rho=0.430 top3=0.67 | ours    1.95  ref    0.69 ms/sample (n=200)  x2.80883
+cci_a1sd         xgboost       TreeSHAP(inter)        margin         cos=0.745 sign=0.738 rho=0.576 top3=0.67 | ours    1.95  ref    9.13 ms/sample (n=200)  x0.213148
+cci_a1sd         xgboost       xgb pred_contribs      margin         cos=0.722 sign=0.713 rho=0.430 top3=0.67 | ours    1.95  ref    0.07 ms/sample (n=200)  x25.9882
+cci_a1sd         lightgbm      TreeSHAP(path)         margin         cos=0.677 sign=0.679 rho=0.709 top3=0.67 | ours    3.76  ref    1.76 ms/sample (n=200)  x2.13985
+cci_a1sd         lightgbm      TreeSHAP(inter)        proba          cos=0.684 sign=0.679 rho=0.673 top3=0.67 | ours    3.76  ref   18.64 ms/sample (n=200)  x0.201879
+cci_a1sd         lightgbm      lgb pred_contrib       margin         cos=0.677 sign=0.679 rho=0.709 top3=0.67 | ours    3.76  ref    0.33 ms/sample (n=200)  x11.4816
+== cci_a1sd_binary  task=binary  n=4000/600  d=10  K=2
+cci_a1sd_binary  random_forest TreeSHAP(path)         proba          cos=0.862 sign=0.671 rho=0.697 top3=1.00 | ours   57.58  ref    0.05 ms/sample (n=200)  x1087.35
+cci_a1sd_binary  random_forest TreeSHAP(inter)        proba          cos=0.882 sign=0.679 rho=0.709 top3=1.00 | ours   57.58  ref    0.42 ms/sample (n=200)  x137.051
+cci_a1sd_binary  xgboost       TreeSHAP(path)         margin         cos=0.872 sign=0.629 rho=0.661 top3=1.00 | ours    1.37  ref    0.09 ms/sample (n=200)  x14.7309
+cci_a1sd_binary  xgboost       TreeSHAP(inter)        proba          cos=0.873 sign=0.575 rho=0.685 top3=1.00 | ours    1.37  ref    0.17 ms/sample (n=200)  x8.02521
+cci_a1sd_binary  xgboost       xgb pred_contribs      margin         cos=0.872 sign=0.629 rho=0.661 top3=1.00 | ours    1.37  ref    0.01 ms/sample (n=200)  x120.715
+cci_a1sd_binary  lightgbm      TreeSHAP(path)         margin         cos=0.811 sign=0.637 rho=0.806 top3=1.00 | ours    1.68  ref    0.48 ms/sample (n=200)  x3.49145
+cci_a1sd_binary  lightgbm      TreeSHAP(inter)        proba          cos=0.832 sign=0.613 rho=0.770 top3=1.00 | ours    1.68  ref    1.91 ms/sample (n=200)  x0.880924
+cci_a1sd_binary  lightgbm      lgb pred_contrib       margin         cos=0.811 sign=0.637 rho=0.806 top3=1.00 | ours    1.68  ref    0.10 ms/sample (n=200)  x16.6761
+== vran_computing  task=binary  n=4000/600  d=7  K=2
+vran_computing   random_forest TreeSHAP(path)         proba          cos=0.836 sign=0.792 rho=0.964 top3=1.00 | ours   61.77  ref    3.84 ms/sample (n=200)  x16.1004
+vran_computing   random_forest TreeSHAP(inter)        proba          cos=0.880 sign=0.899 rho=0.929 top3=1.00 | ours   62.85  ref   18.52 ms/sample (n=24)  x3.3943
+vran_computing   xgboost       TreeSHAP(path)         margin         cos=0.734 sign=0.780 rho=0.679 top3=0.67 | ours    1.39  ref    0.14 ms/sample (n=200)  x9.98309
+vran_computing   xgboost       TreeSHAP(inter)        proba          cos=0.737 sign=0.774 rho=0.786 top3=0.67 | ours    1.39  ref    1.78 ms/sample (n=200)  x0.781238
+vran_computing   xgboost       xgb pred_contribs      margin         cos=0.734 sign=0.780 rho=0.679 top3=0.67 | ours    1.39  ref    0.07 ms/sample (n=200)  x19.5151
+vran_computing   lightgbm      TreeSHAP(path)         margin         cos=0.562 sign=0.685 rho=0.857 top3=0.67 | ours    1.99  ref    0.84 ms/sample (n=200)  x2.37365
+vran_computing   lightgbm      TreeSHAP(inter)        proba          cos=0.641 sign=0.720 rho=0.821 top3=0.67 | ours    2.57  ref    5.52 ms/sample (n=24)  x0.464635
+vran_computing   lightgbm      lgb pred_contrib       margin         cos=0.562 sign=0.685 rho=0.857 top3=0.67 | ours    1.99  ref    0.17 ms/sample (n=200)  x11.4097
+== ddos_pcap  task=multiclass  n=44/20  d=21  K=3
+ddos_pcap        random_forest TreeSHAP(path)         proba          cos=0.549 sign=0.526 rho=0.714 top3=1.00 | ours   54.55  ref    0.25 ms/sample (n=20)  x220.487
+ddos_pcap        random_forest TreeSHAP(inter)        proba          cos=0.561 sign=0.536 rho=0.712 top3=1.00 | ours   54.55  ref    0.96 ms/sample (n=20)  x56.6955
+ddos_pcap        xgboost       TreeSHAP(path)         margin         cos=0.298 sign=0.260 rho=0.523 top3=0.33 | ours    2.08  ref    1.76 ms/sample (n=20)  x1.18176
+ddos_pcap        xgboost       TreeSHAP(inter)        margin         cos=0.326 sign=0.262 rho=0.537 top3=0.33 | ours    2.08  ref    2.75 ms/sample (n=20)  x0.756452
+ddos_pcap        xgboost       xgb pred_contribs      margin         cos=0.298 sign=0.260 rho=0.523 top3=0.33 | ours    2.08  ref    0.12 ms/sample (n=20)  x17.9213
+ddos_pcap        lightgbm      TreeSHAP(path)         margin         cos=0.261 sign=0.336 rho=0.013 top3=0.33 | ours    1.45  ref    0.66 ms/sample (n=20)  x2.19328
+ddos_pcap        lightgbm      TreeSHAP(inter)        proba          cos=0.325 sign=0.357 rho=-0.014 top3=0.33 | ours    1.62  ref    1.61 ms/sample (n=24)  x1.00673
+ddos_pcap        lightgbm      lgb pred_contrib       margin         cos=0.261 sign=0.336 rho=0.013 top3=0.33 | ours    1.45  ref    0.02 ms/sample (n=20)  x83.5533
+done -> E:\可信AI\py\_research\adv_trees.csv

@@ -1,0 +1,101 @@
+dataset,task,method,n_rows,d,model,check,eff_err,rel_err,cos_mean,cos_min,max_abs_diff,base_diff,ms_per_sample,speedup,note
+cci_a1sd,classification,exact,24,10,xgboost,routing,,,,,,,,,target=margin of class 1 fit 0.35s
+cci_a1sd,classification,exact,24,10,xgboost,exactness,2.98675e-06,6.52721e-07,,,,,,,"max|base+sum(phi)-margin|=2.99e-06, max|margin|=4.58"
+cci_a1sd,classification,exact,24,10,xgboost,vs TreeExplainer,,,1,1,0,0,,,
+cci_a1sd,classification,exact,100,10,xgboost,cost exact,,,,,,,0.044702,,
+cci_a1sd,classification,kernel,100,10,xgboost,cost sampled,,,,,,,1.60606,35.9281,target=P(class 1)
+cci_a1sd,classification,exact,24,10,lightgbm,routing,,,,,,,,,target=margin of class 1 fit 0.42s
+cci_a1sd,classification,exact,24,10,lightgbm,exactness,1.42109e-14,1.5813e-15,,,,,,,"max|base+sum(phi)-margin|=1.42e-14, max|margin|=8.99"
+cci_a1sd,classification,exact,24,10,lightgbm,vs TreeExplainer,,,1,1,0,4.44089e-16,,,
+cci_a1sd,classification,exact,100,10,lightgbm,cost exact,,,,,,,0.210849,,
+cci_a1sd,classification,kernel,100,10,lightgbm,cost sampled,,,,,,,2.74549,13.0211,target=P(class 1)
+cci_a1sd,classification,kernel,24,10,random_forest,routing,,,,,,,,,target=P(class 1) fit 0.20s
+cci_a1sd,classification,kernel,24,10,random_forest,sampled efficiency,2.22045e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+cci_a1sd,classification,n/a,4,10,random_forest,exact refused,,,,,,,,,ValueError: RandomForestClassifier has no exact contribution path (xgboost/lightgbm only); use method=
+cci_a1sd,classification,kernel,24,10,hist_grad_boost,routing,,,,,,,,,target=P(class 1) fit 2.45s
+cci_a1sd,classification,kernel,24,10,hist_grad_boost,sampled efficiency,1.91156e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+cci_a1sd,classification,n/a,4,10,hist_grad_boost,exact refused,,,,,,,,,ValueError: HistGradientBoostingClassifier has no exact contribution path (xgboost/lightgbm only); use
+cci_a1sd,classification,kernel,24,10,grad_boost,routing,,,,,,,,,target=P(class 1) fit 3.67s
+cci_a1sd,classification,kernel,24,10,grad_boost,sampled efficiency,2.22045e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+cci_a1sd,classification,n/a,4,10,grad_boost,exact refused,,,,,,,,,ValueError: GradientBoostingClassifier has no exact contribution path (xgboost/lightgbm only); use met
+cci_a1sd,classification,kernel,24,10,logistic,routing,,,,,,,,,target=P(class 1) fit 0.01s
+cci_a1sd,classification,kernel,24,10,logistic,sampled efficiency,1.11022e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+cci_a1sd,classification,n/a,4,10,logistic,exact refused,,,,,,,,,ValueError: LogisticRegression has no exact contribution path (xgboost/lightgbm only); use method='ker
+cci_a1sd,classification,kernel,24,10,mlp,routing,,,,,,,,,target=P(class 1) fit 0.24s
+cci_a1sd,classification,kernel,24,10,mlp,sampled efficiency,2.22045e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+cci_a1sd,classification,n/a,4,10,mlp,exact refused,,,,,,,,,ValueError: MLPClassifier has no exact contribution path (xgboost/lightgbm only); use method='kernel'
+cci_a1sd_binary,classification,exact,24,10,xgboost,routing,,,,,,,,,target=margin of class 1 fit 0.20s
+cci_a1sd_binary,classification,exact,24,10,xgboost,exactness,2.3731e-06,3.37286e-07,,,,,,,"max|base+sum(phi)-margin|=2.37e-06, max|margin|=7.04"
+cci_a1sd_binary,classification,exact,24,10,xgboost,vs TreeExplainer,,,1,1,0,0,,,
+cci_a1sd_binary,classification,exact,100,10,xgboost,cost exact,,,,,,,0.016372,,
+cci_a1sd_binary,classification,kernel,100,10,xgboost,cost sampled,,,,,,,1.19095,72.7433,target=P(class 1)
+cci_a1sd_binary,classification,exact,24,10,lightgbm,routing,,,,,,,,,target=margin of class 1 fit 0.14s
+cci_a1sd_binary,classification,exact,24,10,lightgbm,exactness,1.95399e-14,1.37854e-15,,,,,,,"max|base+sum(phi)-margin|=1.95e-14, max|margin|=14.2"
+cci_a1sd_binary,classification,exact,24,10,lightgbm,vs TreeExplainer,,,1,1,0,0,,,
+cci_a1sd_binary,classification,exact,100,10,lightgbm,cost exact,,,,,,,0.094439,,
+cci_a1sd_binary,classification,kernel,100,10,lightgbm,cost sampled,,,,,,,1.5684,16.6075,target=P(class 1)
+cci_a1sd_binary,classification,kernel,24,10,random_forest,routing,,,,,,,,,target=P(class 1) fit 0.16s
+cci_a1sd_binary,classification,kernel,24,10,random_forest,sampled efficiency,1.11022e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+cci_a1sd_binary,classification,n/a,4,10,random_forest,exact refused,,,,,,,,,ValueError: RandomForestClassifier has no exact contribution path (xgboost/lightgbm only); use method=
+cci_a1sd_binary,classification,kernel,24,10,hist_grad_boost,routing,,,,,,,,,target=P(class 1) fit 0.10s
+cci_a1sd_binary,classification,kernel,24,10,hist_grad_boost,sampled efficiency,2.14753e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+cci_a1sd_binary,classification,n/a,4,10,hist_grad_boost,exact refused,,,,,,,,,ValueError: HistGradientBoostingClassifier has no exact contribution path (xgboost/lightgbm only); use
+cci_a1sd_binary,classification,kernel,24,10,grad_boost,routing,,,,,,,,,target=P(class 1) fit 0.52s
+cci_a1sd_binary,classification,kernel,24,10,grad_boost,sampled efficiency,1.53564e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+cci_a1sd_binary,classification,n/a,4,10,grad_boost,exact refused,,,,,,,,,ValueError: GradientBoostingClassifier has no exact contribution path (xgboost/lightgbm only); use met
+cci_a1sd_binary,classification,kernel,24,10,logistic,routing,,,,,,,,,target=P(class 1) fit 0.02s
+cci_a1sd_binary,classification,kernel,24,10,logistic,sampled efficiency,1.67401e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+cci_a1sd_binary,classification,n/a,4,10,logistic,exact refused,,,,,,,,,ValueError: LogisticRegression has no exact contribution path (xgboost/lightgbm only); use method='ker
+cci_a1sd_binary,classification,kernel,24,10,mlp,routing,,,,,,,,,target=P(class 1) fit 0.17s
+cci_a1sd_binary,classification,kernel,24,10,mlp,sampled efficiency,1.11022e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+cci_a1sd_binary,classification,n/a,4,10,mlp,exact refused,,,,,,,,,ValueError: MLPClassifier has no exact contribution path (xgboost/lightgbm only); use method='kernel'
+vran_computing,classification,exact,24,7,xgboost,routing,,,,,,,,,target=margin of class 1 fit 0.22s
+vran_computing,classification,exact,24,7,xgboost,exactness,4.21703e-06,4.08925e-07,,,,,,,"max|base+sum(phi)-margin|=4.22e-06, max|margin|=10.3"
+vran_computing,classification,exact,24,7,xgboost,vs TreeExplainer,,,1,1,0,0,,,
+vran_computing,classification,exact,100,7,xgboost,cost exact,,,,,,,0.058583,,
+vran_computing,classification,kernel,100,7,xgboost,cost sampled,,,,,,,1.30733,22.3158,target=P(class 1)
+vran_computing,classification,exact,24,7,lightgbm,routing,,,,,,,,,target=margin of class 1 fit 0.23s
+vran_computing,classification,exact,24,7,lightgbm,exactness,2.84217e-14,1.36608e-15,,,,,,,"max|base+sum(phi)-margin|=2.84e-14, max|margin|=20.8"
+vran_computing,classification,exact,24,7,lightgbm,vs TreeExplainer,,,1,1,0,0,,,
+vran_computing,classification,exact,100,7,lightgbm,cost exact,,,,,,,0.120745,,
+vran_computing,classification,kernel,100,7,lightgbm,cost sampled,,,,,,,2.04548,16.9405,target=P(class 1)
+vran_computing,classification,kernel,24,7,random_forest,routing,,,,,,,,,target=P(class 1) fit 0.19s
+vran_computing,classification,kernel,24,7,random_forest,sampled efficiency,5.55112e-17,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+vran_computing,classification,n/a,4,7,random_forest,exact refused,,,,,,,,,ValueError: RandomForestClassifier has no exact contribution path (xgboost/lightgbm only); use method=
+vran_computing,classification,kernel,24,7,hist_grad_boost,routing,,,,,,,,,target=P(class 1) fit 0.73s
+vran_computing,classification,kernel,24,7,hist_grad_boost,sampled efficiency,5.55112e-17,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+vran_computing,classification,n/a,4,7,hist_grad_boost,exact refused,,,,,,,,,ValueError: HistGradientBoostingClassifier has no exact contribution path (xgboost/lightgbm only); use
+vran_computing,classification,kernel,24,7,grad_boost,routing,,,,,,,,,target=P(class 1) fit 0.39s
+vran_computing,classification,kernel,24,7,grad_boost,sampled efficiency,5.55112e-17,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+vran_computing,classification,n/a,4,7,grad_boost,exact refused,,,,,,,,,ValueError: GradientBoostingClassifier has no exact contribution path (xgboost/lightgbm only); use met
+vran_computing,classification,kernel,24,7,logistic,routing,,,,,,,,,target=P(class 1) fit 0.02s
+vran_computing,classification,kernel,24,7,logistic,sampled efficiency,1.11022e-16,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+vran_computing,classification,n/a,4,7,logistic,exact refused,,,,,,,,,ValueError: LogisticRegression has no exact contribution path (xgboost/lightgbm only); use method='ker
+vran_computing,classification,kernel,24,7,mlp,routing,,,,,,,,,target=P(class 1) fit 0.15s
+vran_computing,classification,kernel,24,7,mlp,sampled efficiency,5.55112e-17,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+vran_computing,classification,n/a,4,7,mlp,exact refused,,,,,,,,,ValueError: MLPClassifier has no exact contribution path (xgboost/lightgbm only); use method='kernel'
+vran_energy,regression,exact,24,16,xgboost,routing,,,,,,,,,target=prediction on the model margin fit 0.27s
+vran_energy,regression,exact,24,16,xgboost,exactness,3.52645e-06,2.67687e-07,,,,,,,"max|base+sum(phi)-margin|=3.53e-06, max|margin|=13.2"
+vran_energy,regression,exact,24,16,xgboost,vs TreeExplainer,,,1,1,0,0,,,
+vran_energy,regression,exact,100,16,xgboost,cost exact,,,,,,,0.124903,,
+vran_energy,regression,kernel,100,16,xgboost,cost sampled,,,,,,,1.44165,11.5422,target=prediction
+vran_energy,regression,exact,24,16,lightgbm,routing,,,,,,,,,target=prediction on the model margin fit 0.32s
+vran_energy,regression,exact,24,16,lightgbm,exactness,1.77636e-14,1.34718e-15,,,,,,,"max|base+sum(phi)-margin|=1.78e-14, max|margin|=13.2"
+vran_energy,regression,exact,24,16,lightgbm,vs TreeExplainer,,,1,1,0,0,,,
+vran_energy,regression,exact,100,16,lightgbm,cost exact,,,,,,,0.158089,,
+vran_energy,regression,kernel,100,16,lightgbm,cost sampled,,,,,,,2.22417,14.0691,target=prediction
+vran_energy,regression,kernel,24,16,random_forest,routing,,,,,,,,,target=prediction fit 0.22s
+vran_energy,regression,kernel,24,16,random_forest,sampled efficiency,5.32907e-15,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+vran_energy,regression,n/a,4,16,random_forest,exact refused,,,,,,,,,ValueError: RandomForestRegressor has no exact contribution path (xgboost/lightgbm only); use method='
+vran_energy,regression,kernel,24,16,hist_grad_boost,routing,,,,,,,,,target=prediction fit 0.67s
+vran_energy,regression,kernel,24,16,hist_grad_boost,sampled efficiency,0,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+vran_energy,regression,n/a,4,16,hist_grad_boost,exact refused,,,,,,,,,ValueError: HistGradientBoostingRegressor has no exact contribution path (xgboost/lightgbm only); use 
+vran_energy,regression,kernel,24,16,grad_boost,routing,,,,,,,,,target=prediction fit 0.81s
+vran_energy,regression,kernel,24,16,grad_boost,sampled efficiency,0,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+vran_energy,regression,n/a,4,16,grad_boost,exact refused,,,,,,,,,ValueError: GradientBoostingRegressor has no exact contribution path (xgboost/lightgbm only); use meth
+vran_energy,regression,kernel,24,16,logistic,routing,,,,,,,,,target=prediction fit 0.02s
+vran_energy,regression,kernel,24,16,logistic,sampled efficiency,0,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+vran_energy,regression,n/a,4,16,logistic,exact refused,,,,,,,,,ValueError: Ridge has no exact contribution path (xgboost/lightgbm only); use method='kernel'
+vran_energy,regression,kernel,24,16,mlp,routing,,,,,,,,,target=prediction fit 2.71s
+vran_energy,regression,kernel,24,16,mlp,sampled efficiency,1.77636e-15,,,,,,nan,,max|base+sum(phi)-f(x)|; rescaled => self-consistent only
+vran_energy,regression,n/a,4,16,mlp,exact refused,,,,,,,,,ValueError: MLPRegressor has no exact contribution path (xgboost/lightgbm only); use method='kernel'

@@ -1,0 +1,69 @@
+cci_a1sd n=12600/5400 d=10 K=3 ['Normal', 'Dos', 'Covert']
+  random_forest    AUC=0.5259 acc=0.7007 n=12600/5400 | thr=0.5240 conf_only=0.5252 ssa=0.5209 lira=0.5076
+      diag: KS=0.0472 TPR@1%=0.001 conf_gap=0.0036 gen_gap=0.0026 dup=0.0000 shadows=8 (2.1s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.5240; label-free meta AUC=0.5252; 8 shadow models: SSA AUC=0.5209, LiRA AUC=0.5076; KS(nll)=0.0472 TPR@1%FPR=0.001 conf_gap=0.0036 generalization_gap=0.0026 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  rf_overfit       AUC=0.6357 acc=0.9474 n=300/5400 | thr=0.6270 conf_only=0.6351 ssa=0.6206 lira=0.6034
+      diag: KS=0.1983 TPR@1%=0.000 conf_gap=0.0348 gen_gap=0.0269 dup=0.0000 shadows=8 (2.5s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.6270; label-free meta AUC=0.6351; 8 shadow models: SSA AUC=0.6206, LiRA AUC=0.6034; KS(nll)=0.1983 TPR@1%FPR=0.000 conf_gap=0.0348 generalization_gap=0.0269 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  numpy_nodp       AUC=0.4989 acc=0.7003 n=12600/5400 | thr=0.4999 conf_only=0.4978 ssa=  --   lira=  --  
+      diag: KS=0.0113 TPR@1%=0.010 conf_gap=0.0005 gen_gap=0.0040 dup=0.0000 shadows=0 (0.6s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.4999; label-free meta AUC=0.4978; shadows unavailable (AttributeError: '_Proxy' object has no attribute 'clone_unfitted'); KS(nll)=0.0113 TPR@1%FPR=0.010 conf_gap=0.0005 generalization_gap=0.0040 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  dp_eps1          AUC=0.4915 acc=0.7000 n=12600/5400 | thr=0.4999 conf_only=0.4951 ssa=  --   lira=  --  
+      diag: KS=0.0092 TPR@1%=0.008 conf_gap=0.0007 gen_gap=-0.0016 dup=0.0000 shadows=0 (0.1s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.4999; label-free meta AUC=0.4951; shadows unavailable (AttributeError: '_Proxy' object has no attribute 'clone_unfitted'); KS(nll)=0.0092 TPR@1%FPR=0.008 conf_gap=0.0007 generalization_gap=-0.0016 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  dp_eps0.1        AUC=0.5001 acc=0.7000 n=12600/5400 | thr=0.4992 conf_only=0.4984 ssa=  --   lira=  --  
+      diag: KS=0.0060 TPR@1%=0.000 conf_gap=-0.0001 gen_gap=-0.0044 dup=0.0000 shadows=0 (0.1s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.4992; label-free meta AUC=0.4984; shadows unavailable (AttributeError: '_Proxy' object has no attribute 'clone_unfitted'); KS(nll)=0.0060 TPR@1%FPR=0.000 conf_gap=-0.0001 generalization_gap=-0.0044 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  cci_a1sd total 7.5s
+cci_a1sd_binary n=8400/3600 d=10 K=2 ['Normal', 'Dos']
+  random_forest    AUC=0.5002 acc=0.6985 n=8400/3600 | thr=0.5011 conf_only=0.5002 ssa=0.5011 lira=0.5011
+      diag: KS=0.0023 TPR@1%=0.000 conf_gap=0.0002 gen_gap=0.0000 dup=0.0000 shadows=8 (2.2s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.5011; label-free meta AUC=0.5002; 8 shadow models: SSA AUC=0.5011, LiRA AUC=0.5011; KS(nll)=0.0023 TPR@1%FPR=0.000 conf_gap=0.0002 generalization_gap=0.0000 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  rf_overfit       AUC=0.5210 acc=0.9231 n=300/3600 | thr=0.5183 conf_only=0.5210 ssa=0.5185 lira=0.5188
+      diag: KS=0.0364 TPR@1%=0.000 conf_gap=0.0022 gen_gap=0.0000 dup=0.0000 shadows=8 (2.2s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.5183; label-free meta AUC=0.5210; 8 shadow models: SSA AUC=0.5185, LiRA AUC=0.5188; KS(nll)=0.0364 TPR@1%FPR=0.000 conf_gap=0.0022 generalization_gap=0.0000 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  numpy_nodp       AUC=0.4930 acc=0.6998 n=8400/3600 | thr=0.5077 conf_only=0.5131 ssa=  --   lira=  --  
+      diag: KS=0.0234 TPR@1%=0.007 conf_gap=0.0002 gen_gap=0.0013 dup=0.0000 shadows=0 (0.3s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.5077; label-free meta AUC=0.5131; shadows unavailable (AttributeError: '_Proxy' object has no attribute 'clone_unfitted'); KS(nll)=0.0234 TPR@1%FPR=0.007 conf_gap=0.0002 generalization_gap=0.0013 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  dp_eps1          AUC=0.5145 acc=0.7000 n=8400/3600 | thr=0.5090 conf_only=0.4808 ssa=  --   lira=  --  
+      diag: KS=0.0195 TPR@1%=0.012 conf_gap=-0.0002 gen_gap=0.0005 dup=0.0000 shadows=0 (0.1s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.5090; label-free meta AUC=0.4808; shadows unavailable (AttributeError: '_Proxy' object has no attribute 'clone_unfitted'); KS(nll)=0.0195 TPR@1%FPR=0.012 conf_gap=-0.0002 generalization_gap=0.0005 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  dp_eps0.1        AUC=0.4923 acc=0.7000 n=8400/3600 | thr=0.5016 conf_only=0.4942 ssa=  --   lira=  --  
+      diag: KS=0.0043 TPR@1%=0.010 conf_gap=0.0001 gen_gap=-0.0025 dup=0.0000 shadows=0 (0.1s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.5016; label-free meta AUC=0.4942; shadows unavailable (AttributeError: '_Proxy' object has no attribute 'clone_unfitted'); KS(nll)=0.0043 TPR@1%FPR=0.010 conf_gap=0.0001 generalization_gap=-0.0025 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  cci_a1sd_binary total 6.4s
+vran_computing n=37800/16200 d=7 K=2 ['ok', 'explode']
+  random_forest    AUC=0.5484 acc=0.7154 n=37800/16200 | thr=0.5286 conf_only=0.5129 ssa=0.5346 lira=0.5288
+      diag: KS=0.0536 TPR@1%=0.014 conf_gap=0.0146 gen_gap=0.0377 dup=0.0100 shadows=8 (3.2s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.5286; label-free meta AUC=0.5129; 8 shadow models: SSA AUC=0.5346, LiRA AUC=0.5288; KS(nll)=0.0536 TPR@1%FPR=0.014 conf_gap=0.0146 generalization_gap=0.0377 exact_dup=0.0100; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  rf_overfit       AUC=0.5124 acc=0.9818 n=300/16200 | thr=0.5304 conf_only=0.5455 ssa=0.5240 lira=0.5377
+      diag: KS=0.0854 TPR@1%=0.000 conf_gap=0.0068 gen_gap=0.0365 dup=0.0002 shadows=8 (3.0s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.5304; label-free meta AUC=0.5455; 8 shadow models: SSA AUC=0.5240, LiRA AUC=0.5377; KS(nll)=0.0854 TPR@1%FPR=0.000 conf_gap=0.0068 generalization_gap=0.0365 exact_dup=0.0002; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  numpy_nodp       AUC=0.5035 acc=0.7000 n=37800/16200 | thr=0.4955 conf_only=0.5037 ssa=  --   lira=  --  
+      diag: KS=0.0110 TPR@1%=0.009 conf_gap=-0.0012 gen_gap=-0.0001 dup=0.0100 shadows=0 (1.5s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.4955; label-free meta AUC=0.5037; shadows unavailable (AttributeError: '_Proxy' object has no attribute 'clone_unfitted'); KS(nll)=0.0110 TPR@1%FPR=0.009 conf_gap=-0.0012 generalization_gap=-0.0001 exact_dup=0.0100; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  dp_eps1          AUC=0.4922 acc=0.7000 n=37800/16200 | thr=0.4951 conf_only=0.5062 ssa=  --   lira=  --  
+      diag: KS=0.0104 TPR@1%=0.009 conf_gap=-0.0002 gen_gap=-0.0019 dup=0.0100 shadows=0 (0.2s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.4951; label-free meta AUC=0.5062; shadows unavailable (AttributeError: '_Proxy' object has no attribute 'clone_unfitted'); KS(nll)=0.0104 TPR@1%FPR=0.009 conf_gap=-0.0002 generalization_gap=-0.0019 exact_dup=0.0100; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  dp_eps0.1        AUC=0.4981 acc=0.7000 n=37800/16200 | thr=0.5000 conf_only=0.5001 ssa=  --   lira=  --  
+      diag: KS=0.0009 TPR@1%=0.000 conf_gap=0.0000 gen_gap=0.0006 dup=0.0100 shadows=0 (0.1s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.5000; label-free meta AUC=0.5001; shadows unavailable (AttributeError: '_Proxy' object has no attribute 'clone_unfitted'); KS(nll)=0.0009 TPR@1%FPR=0.000 conf_gap=0.0000 generalization_gap=0.0006 exact_dup=0.0100; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  vran_computing total 13.0s
+ddos_pcap n=44/20 d=21 K=3 ['benign', 'tcp_syn_flood', 'udp_flood']
+  random_forest    AUC=0.4896 acc=0.6923 n=44/20 | thr=0.4977 conf_only=0.4896 ssa=  --   lira=  --  
+      diag: KS=0.0591 TPR@1%=nan conf_gap=0.0024 gen_gap=0.0000 dup=0.0000 shadows=0 (0.1s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.4977; label-free meta AUC=0.4896; shadows skipped (pool 10, evaluation 10 rows); KS(nll)=0.0591 TPR@1%FPR=nan conf_gap=0.0024 generalization_gap=0.0000 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  rf_overfit       AUC=0.4896 acc=0.6923 n=44/20 | thr=0.4977 conf_only=0.4896 ssa=  --   lira=  --  
+      diag: KS=0.0591 TPR@1%=nan conf_gap=0.0024 gen_gap=0.0000 dup=0.0000 shadows=0 (0.1s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.4977; label-free meta AUC=0.4896; shadows skipped (pool 10, evaluation 10 rows); KS(nll)=0.0591 TPR@1%FPR=nan conf_gap=0.0024 generalization_gap=0.0000 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  numpy_nodp       AUC=0.5069 acc=0.6923 n=44/20 | thr=0.4807 conf_only=0.5278 ssa=  --   lira=  --  
+      diag: KS=0.1455 TPR@1%=nan conf_gap=0.0008 gen_gap=0.0000 dup=0.0000 shadows=0 (0.0s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.4807; label-free meta AUC=0.5278; shadows skipped (pool 10, evaluation 10 rows); KS(nll)=0.1455 TPR@1%FPR=nan conf_gap=0.0008 generalization_gap=0.0000 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  dp_eps1          AUC=0.4653 acc=0.6923 n=44/20 | thr=0.4500 conf_only=0.4583 ssa=  --   lira=  --  
+      diag: KS=0.1773 TPR@1%=nan conf_gap=-0.0017 gen_gap=0.0318 dup=0.0000 shadows=0 (0.0s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.4500; label-free meta AUC=0.4583; shadows skipped (pool 10, evaluation 10 rows); KS(nll)=0.1773 TPR@1%FPR=nan conf_gap=-0.0017 generalization_gap=0.0318 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  dp_eps0.1        AUC=0.5000 acc=0.6923 n=44/20 | thr=0.4443 conf_only=0.4861 ssa=  --   lira=  --  
+      diag: KS=0.2000 TPR@1%=nan conf_gap=-0.0026 gen_gap=0.0318 dup=0.0000 shadows=0 (0.0s)
+      note: meta-model on 7 features [conf+ent+margin+p_true+nll+minp+pdg]; threshold(conf) AUC=0.4443; label-free meta AUC=0.4861; shadows skipped (pool 10, evaluation 10 rows); KS(nll)=0.2000 TPR@1%FPR=nan conf_gap=-0.0026 generalization_gap=0.0318 exact_dup=0.0000; AUC~0.5 = no leakage, AUC->1 = strong leakage; label-side features assume the adversary knows the candidate record's label
+  ddos_pcap total 0.6s
+DONE

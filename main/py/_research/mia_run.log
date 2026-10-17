@@ -1,0 +1,423 @@
+cci_a1sd n=12600/5400 d=10 K=3 exact_dup=0/5400 pool_dup=0.0000
+cci_a1sd          random_forest generalization                        dd=no  auc=0.0000 best=0.0000 gap=0.26   train_acc=1.0000 test_acc=0.9974 gap=0.0026 exact_dup=0.0000 pool_dup=
+cci_a1sd          random_forest shipped        conf+ent+margin        dd=no  auc=0.5252 best=0.5252 gap=2.52   library implementation, unchanged
+cci_a1sd          random_forest threshold1     conf                   dd=no  auc=0.5240 best=0.5240 gap=2.40   mean mem=0.99692 non=0.99331 sd=0.01824/0.03599 tpr@fpr1%=0.002
+cci_a1sd          random_forest threshold1     ent                    dd=no  auc=0.4760 best=0.5240 gap=2.40   mean mem=0.01128 non=0.02052 sd=0.05255/0.08073 tpr@fpr1%=0.002
+cci_a1sd          random_forest threshold1     margin                 dd=no  auc=0.5240 best=0.5240 gap=2.40   mean mem=0.99391 non=0.98674 sd=0.03600/0.07098 tpr@fpr1%=0.002
+cci_a1sd          random_forest threshold1     p_true                 dd=no  auc=0.5240 best=0.5240 gap=2.40   mean mem=0.99692 non=0.99246 sd=0.01824/0.04626 tpr@fpr1%=0.002
+cci_a1sd          random_forest threshold1     nll                    dd=no  auc=0.4760 best=0.5240 gap=2.40   mean mem=0.00327 non=0.00948 sd=0.02032/0.07263 tpr@fpr1%=0.002
+cci_a1sd          random_forest threshold1     minp                   dd=no  auc=0.5014 best=0.5014 gap=0.14   mean mem=27.55187 non=27.48439 sd=1.35326/1.84319 tpr@fpr1%=0.003
+cci_a1sd          random_forest threshold1     pdg                    dd=no  auc=0.4989 best=0.5011 gap=0.11   mean mem=0.00000 non=0.00085 sd=0.00000/0.02023 tpr@fpr1%=0.000
+cci_a1sd          random_forest lr_meta        conf+ent+margin        dd=no  auc=0.5252 best=0.5252 gap=2.52   n_attack=7200 held-out
+cci_a1sd          random_forest lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5252 best=0.5252 gap=2.52   n_attack=7200 held-out
+cci_a1sd          random_forest lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5259 best=0.5259 gap=2.59   n_attack=7200 held-out
+cci_a1sd          rf_overfit   generalization                        dd=no  auc=0.0000 best=0.0000 gap=2.69   train_acc=1.0000 test_acc=0.9731 gap=0.0269 n_train=300
+cci_a1sd          rf_overfit   shipped        conf+ent+margin        dd=no  auc=0.6351 best=0.6351 gap=13.51  library implementation, unchanged
+cci_a1sd          rf_overfit   threshold1     conf                   dd=no  auc=0.6270 best=0.6270 gap=12.70  mean mem=0.97404 non=0.93929 sd=0.05372/0.10395 tpr@fpr1%=0.000
+cci_a1sd          rf_overfit   threshold1     ent                    dd=no  auc=0.3731 best=0.6269 gap=12.69  mean mem=0.08803 non=0.16576 sd=0.13338/0.20153 tpr@fpr1%=0.000
+cci_a1sd          rf_overfit   threshold1     margin                 dd=no  auc=0.6271 best=0.6271 gap=12.71  mean mem=0.94851 non=0.88056 sd=0.10712/0.20497 tpr@fpr1%=0.000
+cci_a1sd          rf_overfit   threshold1     p_true                 dd=no  auc=0.6279 best=0.6279 gap=12.79  mean mem=0.97404 non=0.92956 sd=0.05372/0.13893 tpr@fpr1%=0.000
+cci_a1sd          rf_overfit   threshold1     nll                    dd=no  auc=0.3721 best=0.6279 gap=12.79  mean mem=0.02805 non=0.09630 sd=0.06141/0.27772 tpr@fpr1%=0.000
+cci_a1sd          rf_overfit   threshold1     minp                   dd=no  auc=0.5148 best=0.5148 gap=1.48   mean mem=26.49172 non=25.79975 sd=4.96669/6.28739 tpr@fpr1%=0.000
+cci_a1sd          rf_overfit   threshold1     pdg                    dd=no  auc=0.4867 best=0.5133 gap=1.33   mean mem=0.00000 non=0.00973 sd=0.00000/0.07680 tpr@fpr1%=0.000
+cci_a1sd          rf_overfit   lr_meta        conf+ent+margin        dd=no  auc=0.6351 best=0.6351 gap=13.51  n_attack=2280 held-out
+cci_a1sd          rf_overfit   lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.6343 best=0.6343 gap=13.43  n_attack=2280 held-out
+cci_a1sd          rf_overfit   lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.6357 best=0.6357 gap=13.57  n_attack=2280 held-out
+cci_a1sd          rf_overfit   ssa8           conf+ent+margin        dd=no  auc=0.6278 best=0.6278 gap=12.77  shadow meta, acc_on_shadow=0.5471
+cci_a1sd          rf_overfit   ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.6274 best=0.6274 gap=12.74  shadow meta, acc_on_shadow=0.5474
+cci_a1sd          rf_overfit   lira1          conf                   dd=no  auc=0.6120 best=0.6120 gap=11.20  mean lr mem=-0.109 non=-2.632
+cci_a1sd          rf_overfit   lira1          ent                    dd=no  auc=0.6278 best=0.6278 gap=12.77  mean lr mem=-0.181 non=-1.361
+cci_a1sd          rf_overfit   lira1          margin                 dd=no  auc=0.6101 best=0.6101 gap=11.01  mean lr mem=-0.127 non=-2.601
+cci_a1sd          rf_overfit   lira1          p_true                 dd=no  auc=0.5997 best=0.5997 gap=9.97   mean lr mem=0.110 non=-5.636
+cci_a1sd          rf_overfit   lira1          nll                    dd=no  auc=0.5783 best=0.5783 gap=7.83   mean lr mem=0.815 non=-19.146
+cci_a1sd          rf_overfit   lira1          minp                   dd=no  auc=0.5151 best=0.5151 gap=1.51   mean lr mem=-0.291 non=-0.715
+cci_a1sd          rf_overfit   lira1          pdg                    dd=no  auc=0.5128 best=0.5128 gap=1.28   mean lr mem=3.296 non=-702.839
+cci_a1sd          rf_overfit   lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.6092 best=0.6092 gap=10.92  mean of per-feature log-LRs
+cci_a1sd          random_forest ssa8           conf+ent+margin        dd=no  auc=0.5252 best=0.5252 gap=2.52   shadow meta, acc_on_shadow=0.5471
+cci_a1sd          random_forest ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5252 best=0.5252 gap=2.52   shadow meta, acc_on_shadow=0.5474
+cci_a1sd          random_forest lira1          conf                   dd=no  auc=0.5120 best=0.5120 gap=1.20   mean lr mem=0.620 non=0.402
+cci_a1sd          random_forest lira1          ent                    dd=no  auc=0.5252 best=0.5252 gap=2.52   mean lr mem=0.428 non=0.321
+cci_a1sd          random_forest lira1          margin                 dd=no  auc=0.5121 best=0.5121 gap=1.21   mean lr mem=0.614 non=0.396
+cci_a1sd          random_forest lira1          p_true                 dd=no  auc=0.5047 best=0.5047 gap=0.47   mean lr mem=0.934 non=0.544
+cci_a1sd          random_forest lira1          nll                    dd=no  auc=0.4985 best=0.5015 gap=0.15   mean lr mem=1.680 non=0.960
+cci_a1sd          random_forest lira1          minp                   dd=no  auc=0.5018 best=0.5018 gap=0.18   mean lr mem=0.304 non=0.256
+cci_a1sd          random_forest lira1          pdg                    dd=no  auc=0.5009 best=0.5009 gap=0.09   mean lr mem=3.296 non=-16.743
+cci_a1sd          random_forest lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5119 best=0.5119 gap=1.19   mean of per-feature log-LRs
+  rf+shadow block 3.7s
+cci_a1sd          numpy_nodp   generalization                        dd=no  auc=0.0000 best=0.0000 gap=0.40   train_acc=0.9845 test_acc=0.9806 gap=0.0040
+cci_a1sd          numpy_nodp   shipped        conf+ent+margin        dd=no  auc=0.4978 best=0.5022 gap=0.22   library implementation, unchanged
+cci_a1sd          numpy_nodp   threshold1     conf                   dd=no  auc=0.4999 best=0.5001 gap=0.01   mean mem=0.97365 non=0.97314 sd=0.07599/0.07736 tpr@fpr1%=0.010
+cci_a1sd          numpy_nodp   threshold1     ent                    dd=no  auc=0.5001 best=0.5001 gap=0.01   mean mem=0.07128 non=0.07204 sd=0.15244/0.15407 tpr@fpr1%=0.010
+cci_a1sd          numpy_nodp   threshold1     margin                 dd=no  auc=0.4999 best=0.5001 gap=0.01   mean mem=0.94760 non=0.94659 sd=0.15131/0.15406 tpr@fpr1%=0.010
+cci_a1sd          numpy_nodp   threshold1     p_true                 dd=no  auc=0.5008 best=0.5008 gap=0.08   mean mem=0.96748 non=0.96392 sd=0.10783/0.12132 tpr@fpr1%=0.007
+cci_a1sd          numpy_nodp   threshold1     nll                    dd=no  auc=0.4992 best=0.5008 gap=0.08   mean mem=0.04931 non=0.06987 sd=0.26502/0.52025 tpr@fpr1%=0.007
+cci_a1sd          numpy_nodp   threshold1     minp                   dd=no  auc=0.4997 best=0.5003 gap=0.03   mean mem=15.05391 non=15.08844 sd=5.96125/6.03561 tpr@fpr1%=0.009
+cci_a1sd          numpy_nodp   threshold1     pdg                    dd=no  auc=0.4980 best=0.5020 gap=0.20   mean mem=0.00617 non=0.00923 sd=0.06236/0.08061 tpr@fpr1%=0.006
+cci_a1sd          numpy_nodp   lr_meta        conf+ent+margin        dd=no  auc=0.4978 best=0.5022 gap=0.22   n_attack=7200 held-out
+cci_a1sd          numpy_nodp   lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.4985 best=0.5015 gap=0.15   n_attack=7200 held-out
+cci_a1sd          numpy_nodp   lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4989 best=0.5011 gap=0.11   n_attack=7200 held-out
+cci_a1sd          numpy_nodp   ssa8           conf+ent+margin        dd=no  auc=0.5055 best=0.5055 gap=0.55   shadow meta, acc_on_shadow=0.5056
+cci_a1sd          numpy_nodp   ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5040 best=0.5040 gap=0.40   shadow meta, acc_on_shadow=0.5086
+cci_a1sd          numpy_nodp   lira1          conf                   dd=no  auc=0.4986 best=0.5014 gap=0.14   mean lr mem=0.013 non=0.012
+cci_a1sd          numpy_nodp   lira1          ent                    dd=no  auc=0.4992 best=0.5008 gap=0.08   mean lr mem=0.003 non=0.003
+cci_a1sd          numpy_nodp   lira1          margin                 dd=no  auc=0.4984 best=0.5017 gap=0.16   mean lr mem=0.011 non=0.010
+cci_a1sd          numpy_nodp   lira1          p_true                 dd=no  auc=0.5009 best=0.5009 gap=0.09   mean lr mem=0.056 non=0.046
+cci_a1sd          numpy_nodp   lira1          nll                    dd=no  auc=0.5052 best=0.5052 gap=0.52   mean lr mem=0.566 non=0.043
+cci_a1sd          numpy_nodp   lira1          minp                   dd=no  auc=0.5001 best=0.5001 gap=0.01   mean lr mem=0.021 non=0.021
+cci_a1sd          numpy_nodp   lira1          pdg                    dd=no  auc=0.5014 best=0.5014 gap=0.14   mean lr mem=0.101 non=0.080
+cci_a1sd          numpy_nodp   lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5025 best=0.5025 gap=0.25   mean of per-feature log-LRs
+cci_a1sd          numpy_nodp   timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 0.66s
+cci_a1sd          dp_eps8      generalization                        dd=no  auc=0.0000 best=0.0000 gap=-0.06  train_acc=0.9618 test_acc=0.9624 gap=-0.0006
+cci_a1sd          dp_eps8      shipped        conf+ent+margin        dd=no  auc=0.5005 best=0.5005 gap=0.05   library implementation, unchanged
+cci_a1sd          dp_eps8      threshold1     conf                   dd=no  auc=0.4969 best=0.5031 gap=0.31   mean mem=0.98699 non=0.98661 sd=0.05132/0.05298 tpr@fpr1%=0.009
+cci_a1sd          dp_eps8      threshold1     ent                    dd=no  auc=0.5031 best=0.5031 gap=0.31   mean mem=0.04000 non=0.04027 sd=0.10771/0.10990 tpr@fpr1%=0.009
+cci_a1sd          dp_eps8      threshold1     margin                 dd=no  auc=0.4969 best=0.5031 gap=0.31   mean mem=0.97419 non=0.97341 sd=0.10200/0.10553 tpr@fpr1%=0.009
+cci_a1sd          dp_eps8      threshold1     p_true                 dd=no  auc=0.4973 best=0.5027 gap=0.27   mean mem=0.95952 non=0.96010 sd=0.16942/0.16740 tpr@fpr1%=0.010
+cci_a1sd          dp_eps8      threshold1     nll                    dd=no  auc=0.5027 best=0.5027 gap=0.27   mean mem=0.14378 non=0.14668 sd=1.02558/1.11410 tpr@fpr1%=0.010
+cci_a1sd          dp_eps8      threshold1     minp                   dd=no  auc=0.4969 best=0.5031 gap=0.31   mean mem=12.58218 non=12.64657 sd=5.05105/5.10288 tpr@fpr1%=0.010
+cci_a1sd          dp_eps8      threshold1     pdg                    dd=no  auc=0.5003 best=0.5003 gap=0.03   mean mem=0.02747 non=0.02651 sd=0.14878/0.14504 tpr@fpr1%=0.010
+cci_a1sd          dp_eps8      lr_meta        conf+ent+margin        dd=no  auc=0.5005 best=0.5005 gap=0.05   n_attack=7200 held-out
+cci_a1sd          dp_eps8      lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.4997 best=0.5003 gap=0.03   n_attack=7200 held-out
+cci_a1sd          dp_eps8      lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5003 best=0.5003 gap=0.03   n_attack=7200 held-out
+cci_a1sd          dp_eps8      ssa8           conf+ent+margin        dd=no  auc=0.5068 best=0.5068 gap=0.68   shadow meta, acc_on_shadow=0.5056
+cci_a1sd          dp_eps8      ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5037 best=0.5037 gap=0.37   shadow meta, acc_on_shadow=0.5086
+cci_a1sd          dp_eps8      lira1          conf                   dd=no  auc=0.5085 best=0.5085 gap=0.86   mean lr mem=0.023 non=0.023
+cci_a1sd          dp_eps8      lira1          ent                    dd=no  auc=0.5071 best=0.5071 gap=0.71   mean lr mem=0.008 non=0.008
+cci_a1sd          dp_eps8      lira1          margin                 dd=no  auc=0.5089 best=0.5089 gap=0.89   mean lr mem=0.023 non=0.023
+cci_a1sd          dp_eps8      lira1          p_true                 dd=no  auc=0.5049 best=0.5049 gap=0.49   mean lr mem=-0.027 non=-0.033
+cci_a1sd          dp_eps8      lira1          nll                    dd=no  auc=0.5042 best=0.5042 gap=0.42   mean lr mem=-1.618 non=-2.197
+cci_a1sd          dp_eps8      lira1          minp                   dd=no  auc=0.5057 best=0.5057 gap=0.57   mean lr mem=0.015 non=0.014
+cci_a1sd          dp_eps8      lira1          pdg                    dd=no  auc=0.5004 best=0.5004 gap=0.04   mean lr mem=-0.177 non=-0.191
+cci_a1sd          dp_eps8      lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5071 best=0.5071 gap=0.71   mean of per-feature log-LRs
+cci_a1sd          dp_eps8      timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 0.89s
+cci_a1sd          dp_eps1      generalization                        dd=no  auc=0.0000 best=0.0000 gap=-0.16  train_acc=0.9580 test_acc=0.9596 gap=-0.0016
+cci_a1sd          dp_eps1      shipped        conf+ent+margin        dd=no  auc=0.4951 best=0.5049 gap=0.49   library implementation, unchanged
+cci_a1sd          dp_eps1      threshold1     conf                   dd=no  auc=0.4999 best=0.5001 gap=0.01   mean mem=0.99149 non=0.99075 sd=0.04346/0.04604 tpr@fpr1%=0.009
+cci_a1sd          dp_eps1      threshold1     ent                    dd=no  auc=0.5002 best=0.5002 gap=0.02   mean mem=0.02437 non=0.02572 sd=0.08938/0.09408 tpr@fpr1%=0.009
+cci_a1sd          dp_eps1      threshold1     margin                 dd=no  auc=0.4999 best=0.5001 gap=0.01   mean mem=0.98304 non=0.98154 sd=0.08687/0.09206 tpr@fpr1%=0.009
+cci_a1sd          dp_eps1      threshold1     p_true                 dd=no  auc=0.4995 best=0.5005 gap=0.05   mean mem=0.95588 non=0.95793 sd=0.18889/0.18255 tpr@fpr1%=0.012
+cci_a1sd          dp_eps1      threshold1     nll                    dd=no  auc=0.5005 best=0.5005 gap=0.05   mean mem=0.25196 non=0.23535 sd=1.61203/1.62786 tpr@fpr1%=0.012
+cci_a1sd          dp_eps1      threshold1     minp                   dd=no  auc=0.5007 best=0.5007 gap=0.07   mean mem=19.21411 non=19.19689 sd=6.56287/6.53284 tpr@fpr1%=0.011
+cci_a1sd          dp_eps1      threshold1     pdg                    dd=no  auc=0.5009 best=0.5009 gap=0.09   mean mem=0.03561 non=0.03281 sd=0.17761/0.16882 tpr@fpr1%=0.011
+cci_a1sd          dp_eps1      lr_meta        conf+ent+margin        dd=no  auc=0.4951 best=0.5049 gap=0.49   n_attack=7200 held-out
+cci_a1sd          dp_eps1      lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.4906 best=0.5094 gap=0.94   n_attack=7200 held-out
+cci_a1sd          dp_eps1      lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4915 best=0.5085 gap=0.85   n_attack=7200 held-out
+cci_a1sd          dp_eps1      ssa8           conf+ent+margin        dd=no  auc=0.5014 best=0.5014 gap=0.14   shadow meta, acc_on_shadow=0.5056
+cci_a1sd          dp_eps1      ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5002 best=0.5002 gap=0.02   shadow meta, acc_on_shadow=0.5086
+cci_a1sd          dp_eps1      lira1          conf                   dd=no  auc=0.5008 best=0.5008 gap=0.08   mean lr mem=0.025 non=0.025
+cci_a1sd          dp_eps1      lira1          ent                    dd=no  auc=0.5000 best=0.5000 gap=0.01   mean lr mem=0.008 non=0.008
+cci_a1sd          dp_eps1      lira1          margin                 dd=no  auc=0.5011 best=0.5011 gap=0.11   mean lr mem=0.025 non=0.025
+cci_a1sd          dp_eps1      lira1          p_true                 dd=no  auc=0.4980 best=0.5020 gap=0.20   mean lr mem=-0.062 non=-0.055
+cci_a1sd          dp_eps1      lira1          nll                    dd=no  auc=0.4982 best=0.5018 gap=0.18   mean lr mem=-5.096 non=-5.945
+cci_a1sd          dp_eps1      lira1          minp                   dd=no  auc=0.4977 best=0.5023 gap=0.23   mean lr mem=0.080 non=0.079
+cci_a1sd          dp_eps1      lira1          pdg                    dd=no  auc=0.4993 best=0.5007 gap=0.07   mean lr mem=-0.324 non=-0.293
+cci_a1sd          dp_eps1      lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4984 best=0.5016 gap=0.16   mean of per-feature log-LRs
+cci_a1sd          dp_eps1      timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 0.92s
+cci_a1sd          dp_eps0.1    generalization                        dd=no  auc=0.0000 best=0.0000 gap=-0.44  train_acc=0.8729 test_acc=0.8772 gap=-0.0044
+cci_a1sd          dp_eps0.1    shipped        conf+ent+margin        dd=no  auc=0.4985 best=0.5016 gap=0.16   library implementation, unchanged
+cci_a1sd          dp_eps0.1    threshold1     conf                   dd=no  auc=0.4992 best=0.5008 gap=0.08   mean mem=0.99901 non=0.99909 sd=0.01621/0.01487 tpr@fpr1%=0.009
+cci_a1sd          dp_eps0.1    threshold1     ent                    dd=no  auc=0.5008 best=0.5008 gap=0.08   mean mem=0.00240 non=0.00236 sd=0.03289/0.03111 tpr@fpr1%=0.009
+cci_a1sd          dp_eps0.1    threshold1     margin                 dd=no  auc=0.4996 best=0.5004 gap=0.04   mean mem=0.99803 non=0.99818 sd=0.03243/0.02974 tpr@fpr1%=0.009
+cci_a1sd          dp_eps0.1    threshold1     p_true                 dd=no  auc=0.4980 best=0.5020 gap=0.20   mean mem=0.87270 non=0.87750 sd=0.33222/0.32681 tpr@fpr1%=0.010
+cci_a1sd          dp_eps0.1    threshold1     nll                    dd=no  auc=0.5020 best=0.5020 gap=0.20   mean mem=3.21697 non=3.08434 sd=8.70045/8.53947 tpr@fpr1%=0.000
+cci_a1sd          dp_eps0.1    threshold1     minp                   dd=no  auc=0.4999 best=0.5001 gap=0.01   mean mem=27.63102 non=27.63102 sd=0.00000/0.00000 tpr@fpr1%=0.000
+cci_a1sd          dp_eps0.1    threshold1     pdg                    dd=no  auc=0.5021 best=0.5021 gap=0.22   mean mem=0.12631 non=0.12159 sd=0.33154/0.32598 tpr@fpr1%=0.000
+cci_a1sd          dp_eps0.1    lr_meta        conf+ent+margin        dd=no  auc=0.4985 best=0.5016 gap=0.16   n_attack=7200 held-out
+cci_a1sd          dp_eps0.1    lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5020 best=0.5020 gap=0.20   n_attack=7200 held-out
+cci_a1sd          dp_eps0.1    lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5001 best=0.5001 gap=0.01   n_attack=7200 held-out
+cci_a1sd          dp_eps0.1    ssa8           conf+ent+margin        dd=no  auc=0.5022 best=0.5022 gap=0.22   shadow meta, acc_on_shadow=0.5056
+cci_a1sd          dp_eps0.1    ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4956 best=0.5044 gap=0.44   shadow meta, acc_on_shadow=0.5086
+cci_a1sd          dp_eps0.1    lira1          conf                   dd=no  auc=0.5014 best=0.5014 gap=0.14   mean lr mem=0.029 non=0.029
+cci_a1sd          dp_eps0.1    lira1          ent                    dd=no  auc=0.5017 best=0.5017 gap=0.16   mean lr mem=0.010 non=0.010
+cci_a1sd          dp_eps0.1    lira1          margin                 dd=no  auc=0.5014 best=0.5014 gap=0.14   mean lr mem=0.030 non=0.030
+cci_a1sd          dp_eps0.1    lira1          p_true                 dd=no  auc=0.4956 best=0.5044 gap=0.44   mean lr mem=-0.468 non=-0.431
+cci_a1sd          dp_eps0.1    lira1          nll                    dd=no  auc=0.4949 best=0.5051 gap=0.51   mean lr mem=-188.801 non=-176.268
+cci_a1sd          dp_eps0.1    lira1          minp                   dd=no  auc=0.5001 best=0.5001 gap=0.01   mean lr mem=0.263 non=0.263
+cci_a1sd          dp_eps0.1    lira1          pdg                    dd=no  auc=0.4962 best=0.5038 gap=0.38   mean lr mem=-1.692 non=-1.570
+cci_a1sd          dp_eps0.1    lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4950 best=0.5050 gap=0.50   mean of per-feature log-LRs
+cci_a1sd          dp_eps0.1    timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 0.85s
+cci_a1sd done 7.4s
+cci_a1sd_binary n=8400/3600 d=10 K=2 exact_dup=0/3600 pool_dup=0.0000
+cci_a1sd_binary   random_forest generalization                        dd=no  auc=0.0000 best=0.0000 gap=0.00   train_acc=1.0000 test_acc=1.0000 gap=0.0000 exact_dup=0.0000 pool_dup=
+cci_a1sd_binary   random_forest shipped        conf+ent+margin        dd=no  auc=0.5002 best=0.5002 gap=0.02   library implementation, unchanged
+cci_a1sd_binary   random_forest threshold1     conf                   dd=no  auc=0.5011 best=0.5011 gap=0.11   mean mem=0.99993 non=0.99973 sd=0.00250/0.00655 tpr@fpr1%=0.003
+cci_a1sd_binary   random_forest threshold1     ent                    dd=no  auc=0.4989 best=0.5011 gap=0.11   mean mem=0.00026 non=0.00080 sd=0.00748/0.01733 tpr@fpr1%=0.003
+cci_a1sd_binary   random_forest threshold1     margin                 dd=no  auc=0.5011 best=0.5011 gap=0.11   mean mem=0.99987 non=0.99946 sd=0.00500/0.01310 tpr@fpr1%=0.003
+cci_a1sd_binary   random_forest threshold1     p_true                 dd=no  auc=0.5011 best=0.5011 gap=0.11   mean mem=0.99993 non=0.99973 sd=0.00250/0.00655 tpr@fpr1%=0.003
+cci_a1sd_binary   random_forest threshold1     nll                    dd=no  auc=0.4989 best=0.5011 gap=0.11   mean mem=0.00007 non=0.00029 sd=0.00272/0.00724 tpr@fpr1%=0.003
+cci_a1sd_binary   random_forest threshold1     minp                   dd=no  auc=0.5011 best=0.5011 gap=0.11   mean mem=27.56713 non=27.51305 sd=1.22017/1.66736 tpr@fpr1%=0.003
+cci_a1sd_binary   random_forest threshold1     pdg                    dd=no  auc=0.5000 best=0.5000 gap=0.00   mean mem=0.00000 non=0.00000 sd=0.00000/0.00000 tpr@fpr1%=0.000
+cci_a1sd_binary   random_forest lr_meta        conf+ent+margin        dd=no  auc=0.5002 best=0.5002 gap=0.02   n_attack=4800 held-out
+cci_a1sd_binary   random_forest lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5002 best=0.5002 gap=0.02   n_attack=4800 held-out
+cci_a1sd_binary   random_forest lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5002 best=0.5002 gap=0.02   n_attack=4800 held-out
+cci_a1sd_binary   rf_overfit   generalization                        dd=no  auc=0.0000 best=0.0000 gap=0.00   train_acc=1.0000 test_acc=1.0000 gap=0.0000 n_train=300
+cci_a1sd_binary   rf_overfit   shipped        conf+ent+margin        dd=no  auc=0.5210 best=0.5210 gap=2.10   library implementation, unchanged
+cci_a1sd_binary   rf_overfit   threshold1     conf                   dd=no  auc=0.5183 best=0.5183 gap=1.83   mean mem=0.99929 non=0.99712 sd=0.00559/0.01909 tpr@fpr1%=0.000
+cci_a1sd_binary   rf_overfit   threshold1     ent                    dd=no  auc=0.4817 best=0.5183 gap=1.83   mean mem=0.00320 non=0.00984 sd=0.02121/0.05150 tpr@fpr1%=0.000
+cci_a1sd_binary   rf_overfit   threshold1     margin                 dd=no  auc=0.5183 best=0.5183 gap=1.83   mean mem=0.99858 non=0.99424 sd=0.01117/0.03817 tpr@fpr1%=0.000
+cci_a1sd_binary   rf_overfit   threshold1     p_true                 dd=no  auc=0.5183 best=0.5183 gap=1.83   mean mem=0.99929 non=0.99712 sd=0.00559/0.01909 tpr@fpr1%=0.000
+cci_a1sd_binary   rf_overfit   threshold1     nll                    dd=no  auc=0.4817 best=0.5183 gap=1.83   mean mem=0.00073 non=0.00310 sd=0.00580/0.02167 tpr@fpr1%=0.000
+cci_a1sd_binary   rf_overfit   threshold1     minp                   dd=no  auc=0.5183 best=0.5183 gap=1.83   mean mem=26.77553 non=25.90526 sd=4.38728/6.15520 tpr@fpr1%=0.000
+cci_a1sd_binary   rf_overfit   threshold1     pdg                    dd=no  auc=0.5000 best=0.5000 gap=0.00   mean mem=0.00000 non=0.00000 sd=0.00000/0.00000 tpr@fpr1%=0.000
+cci_a1sd_binary   rf_overfit   lr_meta        conf+ent+margin        dd=no  auc=0.5210 best=0.5210 gap=2.10   n_attack=1560 held-out
+cci_a1sd_binary   rf_overfit   lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5210 best=0.5210 gap=2.10   n_attack=1560 held-out
+cci_a1sd_binary   rf_overfit   lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5210 best=0.5210 gap=2.10   n_attack=1560 held-out
+cci_a1sd_binary   rf_overfit   ssa8           conf+ent+margin        dd=no  auc=0.5190 best=0.5190 gap=1.90   shadow meta, acc_on_shadow=0.5037
+cci_a1sd_binary   rf_overfit   ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5190 best=0.5190 gap=1.90   shadow meta, acc_on_shadow=0.5037
+cci_a1sd_binary   rf_overfit   lira1          conf                   dd=no  auc=0.5190 best=0.5190 gap=1.90   mean lr mem=0.426 non=-4.332
+cci_a1sd_binary   rf_overfit   lira1          ent                    dd=no  auc=0.5190 best=0.5190 gap=1.90   mean lr mem=0.064 non=-2.796
+cci_a1sd_binary   rf_overfit   lira1          margin                 dd=no  auc=0.5190 best=0.5190 gap=1.90   mean lr mem=0.426 non=-4.332
+cci_a1sd_binary   rf_overfit   lira1          p_true                 dd=no  auc=0.5190 best=0.5190 gap=1.90   mean lr mem=0.426 non=-4.332
+cci_a1sd_binary   rf_overfit   lira1          nll                    dd=no  auc=0.5190 best=0.5190 gap=1.90   mean lr mem=0.479 non=-5.132
+cci_a1sd_binary   rf_overfit   lira1          minp                   dd=no  auc=0.5190 best=0.5190 gap=1.90   mean lr mem=-0.207 non=-0.645
+cci_a1sd_binary   rf_overfit   lira1          pdg                    dd=no  auc=0.5000 best=0.5000 gap=0.00   mean lr mem=0.000 non=0.000
+cci_a1sd_binary   rf_overfit   lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5190 best=0.5190 gap=1.90   mean of per-feature log-LRs
+cci_a1sd_binary   random_forest ssa8           conf+ent+margin        dd=no  auc=0.5014 best=0.5014 gap=0.14   shadow meta, acc_on_shadow=0.5037
+cci_a1sd_binary   random_forest ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5014 best=0.5014 gap=0.14   shadow meta, acc_on_shadow=0.5037
+cci_a1sd_binary   random_forest lira1          conf                   dd=no  auc=0.5014 best=0.5014 gap=0.14   mean lr mem=0.803 non=0.276
+cci_a1sd_binary   random_forest lira1          ent                    dd=no  auc=0.5014 best=0.5014 gap=0.14   mean lr mem=0.573 non=0.221
+cci_a1sd_binary   random_forest lira1          margin                 dd=no  auc=0.5014 best=0.5014 gap=0.14   mean lr mem=0.803 non=0.276
+cci_a1sd_binary   random_forest lira1          p_true                 dd=no  auc=0.5014 best=0.5014 gap=0.14   mean lr mem=0.803 non=0.276
+cci_a1sd_binary   random_forest lira1          nll                    dd=no  auc=0.5014 best=0.5014 gap=0.14   mean lr mem=0.835 non=0.273
+cci_a1sd_binary   random_forest lira1          minp                   dd=no  auc=0.5014 best=0.5014 gap=0.14   mean lr mem=0.164 non=0.131
+cci_a1sd_binary   random_forest lira1          pdg                    dd=no  auc=0.5000 best=0.5000 gap=0.00   mean lr mem=0.000 non=0.000
+cci_a1sd_binary   random_forest lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5014 best=0.5014 gap=0.14   mean of per-feature log-LRs
+  rf+shadow block 2.2s
+cci_a1sd_binary   numpy_nodp   generalization                        dd=no  auc=0.0000 best=0.0000 gap=0.13   train_acc=0.9994 test_acc=0.9981 gap=0.0013
+cci_a1sd_binary   numpy_nodp   shipped        conf+ent+margin        dd=no  auc=0.5131 best=0.5131 gap=1.31   library implementation, unchanged
+cci_a1sd_binary   numpy_nodp   threshold1     conf                   dd=no  auc=0.5077 best=0.5077 gap=0.77   mean mem=0.99920 non=0.99905 sd=0.00875/0.01034 tpr@fpr1%=0.010
+cci_a1sd_binary   numpy_nodp   threshold1     ent                    dd=no  auc=0.4923 best=0.5077 gap=0.77   mean mem=0.00411 non=0.00465 sd=0.02073/0.02366 tpr@fpr1%=0.010
+cci_a1sd_binary   numpy_nodp   threshold1     margin                 dd=no  auc=0.5077 best=0.5077 gap=0.77   mean mem=0.99841 non=0.99809 sd=0.01750/0.02068 tpr@fpr1%=0.010
+cci_a1sd_binary   numpy_nodp   threshold1     p_true                 dd=no  auc=0.5078 best=0.5078 gap=0.78   mean mem=0.99883 non=0.99782 sd=0.02124/0.03643 tpr@fpr1%=0.010
+cci_a1sd_binary   numpy_nodp   threshold1     nll                    dd=no  auc=0.4922 best=0.5078 gap=0.78   mean mem=0.00285 non=0.00656 sd=0.13173/0.19259 tpr@fpr1%=0.010
+cci_a1sd_binary   numpy_nodp   threshold1     minp                   dd=no  auc=0.5077 best=0.5077 gap=0.77   mean mem=10.41083 non=10.33712 sd=3.13936/3.16938 tpr@fpr1%=0.010
+cci_a1sd_binary   numpy_nodp   threshold1     pdg                    dd=no  auc=0.4993 best=0.5007 gap=0.07   mean mem=0.00038 non=0.00122 sd=0.01695/0.03017 tpr@fpr1%=0.001
+cci_a1sd_binary   numpy_nodp   lr_meta        conf+ent+margin        dd=no  auc=0.5131 best=0.5131 gap=1.31   n_attack=4800 held-out
+cci_a1sd_binary   numpy_nodp   lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.4904 best=0.5096 gap=0.96   n_attack=4800 held-out
+cci_a1sd_binary   numpy_nodp   lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4930 best=0.5070 gap=0.70   n_attack=4800 held-out
+cci_a1sd_binary   numpy_nodp   ssa8           conf+ent+margin        dd=no  auc=0.5007 best=0.5007 gap=0.07   shadow meta, acc_on_shadow=0.5040
+cci_a1sd_binary   numpy_nodp   ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5029 best=0.5029 gap=0.29   shadow meta, acc_on_shadow=0.5058
+cci_a1sd_binary   numpy_nodp   lira1          conf                   dd=no  auc=0.5045 best=0.5045 gap=0.45   mean lr mem=0.314 non=0.231
+cci_a1sd_binary   numpy_nodp   lira1          ent                    dd=no  auc=0.5077 best=0.5077 gap=0.77   mean lr mem=0.094 non=0.082
+cci_a1sd_binary   numpy_nodp   lira1          margin                 dd=no  auc=0.5045 best=0.5045 gap=0.45   mean lr mem=0.314 non=0.231
+cci_a1sd_binary   numpy_nodp   lira1          p_true                 dd=no  auc=0.5043 best=0.5043 gap=0.43   mean lr mem=0.937 non=0.931
+cci_a1sd_binary   numpy_nodp   lira1          nll                    dd=no  auc=0.5066 best=0.5066 gap=0.66   mean lr mem=1.902 non=1.971
+cci_a1sd_binary   numpy_nodp   lira1          minp                   dd=no  auc=0.5039 best=0.5039 gap=0.39   mean lr mem=-0.009 non=-0.011
+cci_a1sd_binary   numpy_nodp   lira1          pdg                    dd=no  auc=0.5003 best=0.5003 gap=0.03   mean lr mem=1.479 non=1.537
+cci_a1sd_binary   numpy_nodp   lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5064 best=0.5064 gap=0.64   mean of per-feature log-LRs
+cci_a1sd_binary   numpy_nodp   timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 0.43s
+cci_a1sd_binary   dp_eps8      generalization                        dd=no  auc=0.0000 best=0.0000 gap=0.10   train_acc=0.9993 test_acc=0.9983 gap=0.0010
+cci_a1sd_binary   dp_eps8      shipped        conf+ent+margin        dd=no  auc=0.5148 best=0.5148 gap=1.48   library implementation, unchanged
+cci_a1sd_binary   dp_eps8      threshold1     conf                   dd=no  auc=0.5093 best=0.5093 gap=0.93   mean mem=0.99963 non=0.99944 sd=0.00333/0.00839 tpr@fpr1%=0.012
+cci_a1sd_binary   dp_eps8      threshold1     ent                    dd=no  auc=0.4907 best=0.5093 gap=0.93   mean mem=0.00241 non=0.00290 sd=0.01052/0.01709 tpr@fpr1%=0.012
+cci_a1sd_binary   dp_eps8      threshold1     margin                 dd=no  auc=0.5093 best=0.5093 gap=0.93   mean mem=0.99926 non=0.99888 sd=0.00665/0.01679 tpr@fpr1%=0.012
+cci_a1sd_binary   dp_eps8      threshold1     p_true                 dd=no  auc=0.5093 best=0.5093 gap=0.93   mean mem=0.99892 non=0.99793 sd=0.02691/0.03975 tpr@fpr1%=0.012
+cci_a1sd_binary   dp_eps8      threshold1     nll                    dd=no  auc=0.4907 best=0.5093 gap=0.93   mean mem=0.00967 non=0.01372 sd=0.35566/0.37103 tpr@fpr1%=0.012
+cci_a1sd_binary   dp_eps8      threshold1     minp                   dd=no  auc=0.5093 best=0.5093 gap=0.93   mean mem=10.80061 non=10.69541 sd=2.95703/2.90577 tpr@fpr1%=0.012
+cci_a1sd_binary   dp_eps8      threshold1     pdg                    dd=no  auc=0.4995 best=0.5005 gap=0.05   mean mem=0.00071 non=0.00151 sd=0.02671/0.03773 tpr@fpr1%=0.001
+cci_a1sd_binary   dp_eps8      lr_meta        conf+ent+margin        dd=no  auc=0.5148 best=0.5148 gap=1.48   n_attack=4800 held-out
+cci_a1sd_binary   dp_eps8      lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5146 best=0.5146 gap=1.46   n_attack=4800 held-out
+cci_a1sd_binary   dp_eps8      lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5146 best=0.5146 gap=1.46   n_attack=4800 held-out
+cci_a1sd_binary   dp_eps8      ssa8           conf+ent+margin        dd=no  auc=0.5018 best=0.5018 gap=0.18   shadow meta, acc_on_shadow=0.5040
+cci_a1sd_binary   dp_eps8      ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5003 best=0.5003 gap=0.03   shadow meta, acc_on_shadow=0.5058
+cci_a1sd_binary   dp_eps8      lira1          conf                   dd=no  auc=0.5012 best=0.5012 gap=0.12   mean lr mem=0.392 non=0.402
+cci_a1sd_binary   dp_eps8      lira1          ent                    dd=no  auc=0.5039 best=0.5039 gap=0.39   mean lr mem=0.113 non=0.116
+cci_a1sd_binary   dp_eps8      lira1          margin                 dd=no  auc=0.5012 best=0.5012 gap=0.12   mean lr mem=0.392 non=0.402
+cci_a1sd_binary   dp_eps8      lira1          p_true                 dd=no  auc=0.5013 best=0.5013 gap=0.13   mean lr mem=0.872 non=0.787
+cci_a1sd_binary   dp_eps8      lira1          nll                    dd=no  auc=0.5026 best=0.5026 gap=0.26   mean lr mem=1.427 non=1.671
+cci_a1sd_binary   dp_eps8      lira1          minp                   dd=no  auc=0.5015 best=0.5015 gap=0.15   mean lr mem=-0.015 non=-0.019
+cci_a1sd_binary   dp_eps8      lira1          pdg                    dd=no  auc=0.5002 best=0.5002 gap=0.02   mean lr mem=1.349 non=1.249
+cci_a1sd_binary   dp_eps8      lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5026 best=0.5026 gap=0.26   mean of per-feature log-LRs
+cci_a1sd_binary   dp_eps8      timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 0.60s
+cci_a1sd_binary   dp_eps1      generalization                        dd=no  auc=0.0000 best=0.0000 gap=0.05   train_acc=0.9988 test_acc=0.9983 gap=0.0005
+cci_a1sd_binary   dp_eps1      shipped        conf+ent+margin        dd=no  auc=0.4808 best=0.5192 gap=1.92   library implementation, unchanged
+cci_a1sd_binary   dp_eps1      threshold1     conf                   dd=no  auc=0.5091 best=0.5091 gap=0.90   mean mem=0.99948 non=0.99966 sd=0.00954/0.00478 tpr@fpr1%=0.010
+cci_a1sd_binary   dp_eps1      threshold1     ent                    dd=no  auc=0.4909 best=0.5091 gap=0.91   mean mem=0.00216 non=0.00187 sd=0.01911/0.01269 tpr@fpr1%=0.012
+cci_a1sd_binary   dp_eps1      threshold1     margin                 dd=no  auc=0.5091 best=0.5091 gap=0.91   mean mem=0.99895 non=0.99932 sd=0.01909/0.00955 tpr@fpr1%=0.011
+cci_a1sd_binary   dp_eps1      threshold1     p_true                 dd=no  auc=0.5093 best=0.5093 gap=0.93   mean mem=0.99847 non=0.99799 sd=0.03306/0.04105 tpr@fpr1%=0.010
+cci_a1sd_binary   dp_eps1      threshold1     nll                    dd=no  auc=0.4907 best=0.5093 gap=0.93   mean mem=0.02186 non=0.02926 sd=0.72442/0.77185 tpr@fpr1%=0.010
+cci_a1sd_binary   dp_eps1      threshold1     minp                   dd=no  auc=0.5091 best=0.5091 gap=0.91   mean mem=14.75798 non=14.59674 sd=5.92681/5.90015 tpr@fpr1%=0.012
+cci_a1sd_binary   dp_eps1      threshold1     pdg                    dd=no  auc=0.4998 best=0.5002 gap=0.02   mean mem=0.00100 non=0.00167 sd=0.03118/0.04078 tpr@fpr1%=0.001
+cci_a1sd_binary   dp_eps1      lr_meta        conf+ent+margin        dd=no  auc=0.4808 best=0.5192 gap=1.92   n_attack=4800 held-out
+cci_a1sd_binary   dp_eps1      lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5195 best=0.5195 gap=1.95   n_attack=4800 held-out
+cci_a1sd_binary   dp_eps1      lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5145 best=0.5145 gap=1.45   n_attack=4800 held-out
+cci_a1sd_binary   dp_eps1      ssa8           conf+ent+margin        dd=no  auc=0.5092 best=0.5092 gap=0.92   shadow meta, acc_on_shadow=0.5040
+cci_a1sd_binary   dp_eps1      ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4945 best=0.5054 gap=0.55   shadow meta, acc_on_shadow=0.5058
+cci_a1sd_binary   dp_eps1      lira1          conf                   dd=no  auc=0.4960 best=0.5040 gap=0.40   mean lr mem=0.293 non=0.351
+cci_a1sd_binary   dp_eps1      lira1          ent                    dd=no  auc=0.4986 best=0.5014 gap=0.14   mean lr mem=0.095 non=0.101
+cci_a1sd_binary   dp_eps1      lira1          margin                 dd=no  auc=0.4960 best=0.5040 gap=0.40   mean lr mem=0.293 non=0.351
+cci_a1sd_binary   dp_eps1      lira1          p_true                 dd=no  auc=0.4963 best=0.5037 gap=0.37   mean lr mem=0.779 non=0.765
+cci_a1sd_binary   dp_eps1      lira1          nll                    dd=no  auc=0.4975 best=0.5025 gap=0.25   mean lr mem=-0.327 non=-0.023
+cci_a1sd_binary   dp_eps1      lira1          minp                   dd=no  auc=0.4905 best=0.5095 gap=0.95   mean lr mem=0.127 non=0.129
+cci_a1sd_binary   dp_eps1      lira1          pdg                    dd=no  auc=0.5000 best=0.5000 gap=0.00   mean lr mem=1.269 non=1.227
+cci_a1sd_binary   dp_eps1      lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4913 best=0.5087 gap=0.87   mean of per-feature log-LRs
+cci_a1sd_binary   dp_eps1      timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 0.61s
+cci_a1sd_binary   dp_eps0.1    generalization                        dd=no  auc=0.0000 best=0.0000 gap=-0.25  train_acc=0.9511 test_acc=0.9536 gap=-0.0025
+cci_a1sd_binary   dp_eps0.1    shipped        conf+ent+margin        dd=no  auc=0.4942 best=0.5058 gap=0.58   library implementation, unchanged
+cci_a1sd_binary   dp_eps0.1    threshold1     conf                   dd=no  auc=0.5016 best=0.5016 gap=0.16   mean mem=0.99875 non=0.99869 sd=0.01751/0.01934 tpr@fpr1%=0.011
+cci_a1sd_binary   dp_eps0.1    threshold1     ent                    dd=no  auc=0.4993 best=0.5008 gap=0.08   mean mem=0.00315 non=0.00298 sd=0.03724/0.03830 tpr@fpr1%=0.011
+cci_a1sd_binary   dp_eps0.1    threshold1     margin                 dd=no  auc=0.5012 best=0.5012 gap=0.12   mean mem=0.99749 non=0.99739 sd=0.03503/0.03869 tpr@fpr1%=0.011
+cci_a1sd_binary   dp_eps0.1    threshold1     p_true                 dd=no  auc=0.5010 best=0.5010 gap=0.10   mean mem=0.95090 non=0.95398 sd=0.21387/0.20730 tpr@fpr1%=0.010
+cci_a1sd_binary   dp_eps0.1    threshold1     nll                    dd=no  auc=0.4990 best=0.5010 gap=0.10   mean mem=1.09841 non=1.02937 sd=5.21085/5.04723 tpr@fpr1%=0.000
+cci_a1sd_binary   dp_eps0.1    threshold1     minp                   dd=no  auc=0.5008 best=0.5008 gap=0.08   mean mem=26.99571 non=26.95655 sd=3.40553/3.45384 tpr@fpr1%=0.011
+cci_a1sd_binary   dp_eps0.1    threshold1     pdg                    dd=no  auc=0.5013 best=0.5013 gap=0.13   mean mem=0.04784 non=0.04472 sd=0.21208/0.20515 tpr@fpr1%=0.000
+cci_a1sd_binary   dp_eps0.1    lr_meta        conf+ent+margin        dd=no  auc=0.4942 best=0.5058 gap=0.58   n_attack=4800 held-out
+cci_a1sd_binary   dp_eps0.1    lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.4918 best=0.5082 gap=0.82   n_attack=4800 held-out
+cci_a1sd_binary   dp_eps0.1    lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4923 best=0.5077 gap=0.77   n_attack=4800 held-out
+cci_a1sd_binary   dp_eps0.1    ssa8           conf+ent+margin        dd=no  auc=0.5003 best=0.5003 gap=0.03   shadow meta, acc_on_shadow=0.5040
+cci_a1sd_binary   dp_eps0.1    ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4932 best=0.5068 gap=0.68   shadow meta, acc_on_shadow=0.5058
+cci_a1sd_binary   dp_eps0.1    lira1          conf                   dd=no  auc=0.4978 best=0.5022 gap=0.22   mean lr mem=0.031 non=-0.128
+cci_a1sd_binary   dp_eps0.1    lira1          ent                    dd=no  auc=0.4991 best=0.5009 gap=0.09   mean lr mem=0.025 non=0.000
+cci_a1sd_binary   dp_eps0.1    lira1          margin                 dd=no  auc=0.4983 best=0.5017 gap=0.17   mean lr mem=0.031 non=-0.128
+cci_a1sd_binary   dp_eps0.1    lira1          p_true                 dd=no  auc=0.4955 best=0.5045 gap=0.45   mean lr mem=-10.572 non=-9.824
+cci_a1sd_binary   dp_eps0.1    lira1          nll                    dd=no  auc=0.4953 best=0.5047 gap=0.47   mean lr mem=-122.415 non=-116.631
+cci_a1sd_binary   dp_eps0.1    lira1          minp                   dd=no  auc=0.5031 best=0.5031 gap=0.31   mean lr mem=1.061 non=1.051
+cci_a1sd_binary   dp_eps0.1    lira1          pdg                    dd=no  auc=0.4986 best=0.5014 gap=0.14   mean lr mem=-12.935 non=-11.933
+cci_a1sd_binary   dp_eps0.1    lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5036 best=0.5036 gap=0.36   mean of per-feature log-LRs
+cci_a1sd_binary   dp_eps0.1    timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 0.65s
+cci_a1sd_binary done 4.7s
+vran_computing n=37800/16200 d=7 K=2 exact_dup=162/16200 pool_dup=0.0076
+vran_computing    random_forest generalization                        dd=no  auc=0.0000 best=0.0000 gap=3.77   train_acc=1.0000 test_acc=0.9623 gap=0.0377 exact_dup=0.0100 pool_dup=
+vran_computing    random_forest shipped        conf+ent+margin        dd=no  auc=0.5129 best=0.5129 gap=1.29   library implementation, unchanged
+vran_computing    random_forest threshold1     conf                   dd=no  auc=0.5286 best=0.5286 gap=2.86   mean mem=0.98118 non=0.96657 sd=0.05809/0.09454 tpr@fpr1%=0.000
+vran_computing    random_forest threshold1     ent                    dd=no  auc=0.4714 best=0.5286 gap=2.86   mean mem=0.05172 non=0.07496 sd=0.13545/0.17672 tpr@fpr1%=0.000
+vran_computing    random_forest threshold1     margin                 dd=no  auc=0.5286 best=0.5286 gap=2.86   mean mem=0.96236 non=0.93315 sd=0.11618/0.18909 tpr@fpr1%=0.000
+vran_computing    random_forest threshold1     p_true                 dd=no  auc=0.5296 best=0.5296 gap=2.96   mean mem=0.98118 non=0.95135 sd=0.05809/0.15136 tpr@fpr1%=0.000
+vran_computing    random_forest threshold1     nll                    dd=no  auc=0.4704 best=0.5296 gap=2.96   mean mem=0.02109 non=0.08252 sd=0.06766/0.44197 tpr@fpr1%=0.000
+vran_computing    random_forest threshold1     minp                   dd=no  auc=0.5286 best=0.5286 gap=2.86   mean mem=22.45887 non=21.11386 sd=10.00052/10.87810 tpr@fpr1%=0.000
+vran_computing    random_forest threshold1     pdg                    dd=no  auc=0.4813 best=0.5187 gap=1.87   mean mem=0.00000 non=0.01522 sd=0.00000/0.09360 tpr@fpr1%=0.000
+vran_computing    random_forest lr_meta        conf+ent+margin        dd=no  auc=0.5129 best=0.5129 gap=1.29   n_attack=21600 held-out
+vran_computing    random_forest lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5271 best=0.5271 gap=2.71   n_attack=21600 held-out
+vran_computing    random_forest lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5484 best=0.5484 gap=4.84   n_attack=21600 held-out
+vran_computing    rf_overfit   generalization                        dd=no  auc=0.0000 best=0.0000 gap=3.65   train_acc=1.0000 test_acc=0.9635 gap=0.0365 n_train=300
+vran_computing    rf_overfit   shipped        conf+ent+margin        dd=no  auc=0.5455 best=0.5455 gap=4.55   library implementation, unchanged
+vran_computing    rf_overfit   threshold1     conf                   dd=no  auc=0.5304 best=0.5304 gap=3.04   mean mem=0.97809 non=0.97128 sd=0.05823/0.06776 tpr@fpr1%=0.000
+vran_computing    rf_overfit   threshold1     ent                    dd=no  auc=0.4696 best=0.5304 gap=3.04   mean mem=0.06662 non=0.08473 sd=0.13388/0.14882 tpr@fpr1%=0.000
+vran_computing    rf_overfit   threshold1     margin                 dd=no  auc=0.5304 best=0.5304 gap=3.04   mean mem=0.95618 non=0.94255 sd=0.11647/0.13553 tpr@fpr1%=0.000
+vran_computing    rf_overfit   threshold1     p_true                 dd=no  auc=0.5365 best=0.5365 gap=3.65   mean mem=0.97809 non=0.94621 sd=0.05823/0.16611 tpr@fpr1%=0.000
+vran_computing    rf_overfit   threshold1     nll                    dd=no  auc=0.4635 best=0.5365 gap=3.65   mean mem=0.02428 non=0.23562 sd=0.06826/2.00513 tpr@fpr1%=0.000
+vran_computing    rf_overfit   threshold1     minp                   dd=no  auc=0.5304 best=0.5304 gap=3.04   mean mem=18.57892 non=17.42157 sd=11.66738/11.99128 tpr@fpr1%=0.000
+vran_computing    rf_overfit   threshold1     pdg                    dd=no  auc=0.4818 best=0.5182 gap=1.82   mean mem=0.00000 non=0.02507 sd=0.00000/0.14072 tpr@fpr1%=0.000
+vran_computing    rf_overfit   lr_meta        conf+ent+margin        dd=no  auc=0.5455 best=0.5455 gap=4.55   n_attack=6600 held-out
+vran_computing    rf_overfit   lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5196 best=0.5196 gap=1.96   n_attack=6600 held-out
+vran_computing    rf_overfit   lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5124 best=0.5124 gap=1.24   n_attack=6600 held-out
+vran_computing    rf_overfit   ssa8           conf+ent+margin        dd=no  auc=0.5327 best=0.5327 gap=3.27   shadow meta, acc_on_shadow=0.5308
+vran_computing    rf_overfit   ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5263 best=0.5263 gap=2.63   shadow meta, acc_on_shadow=0.5462
+vran_computing    rf_overfit   lira1          conf                   dd=no  auc=0.5315 best=0.5315 gap=3.15   mean lr mem=0.144 non=0.015
+vran_computing    rf_overfit   lira1          ent                    dd=no  auc=0.5327 best=0.5327 gap=3.27   mean lr mem=0.048 non=-0.034
+vran_computing    rf_overfit   lira1          margin                 dd=no  auc=0.5315 best=0.5315 gap=3.15   mean lr mem=0.144 non=0.015
+vran_computing    rf_overfit   lira1          p_true                 dd=no  auc=0.5470 best=0.5470 gap=4.70   mean lr mem=0.527 non=-2.763
+vran_computing    rf_overfit   lira1          nll                    dd=no  auc=0.5394 best=0.5394 gap=3.94   mean lr mem=1.498 non=-413.343
+vran_computing    rf_overfit   lira1          minp                   dd=no  auc=0.5327 best=0.5327 gap=3.27   mean lr mem=-0.045 non=-0.079
+vran_computing    rf_overfit   lira1          pdg                    dd=no  auc=0.5191 best=0.5191 gap=1.91   mean lr mem=3.340 non=-883.493
+vran_computing    rf_overfit   lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5388 best=0.5388 gap=3.88   mean of per-feature log-LRs
+vran_computing    random_forest ssa8           conf+ent+margin        dd=no  auc=0.5295 best=0.5295 gap=2.95   shadow meta, acc_on_shadow=0.5308
+vran_computing    random_forest ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5363 best=0.5363 gap=3.63   shadow meta, acc_on_shadow=0.5462
+vran_computing    random_forest lira1          conf                   dd=no  auc=0.5076 best=0.5076 gap=0.76   mean lr mem=0.152 non=-0.404
+vran_computing    random_forest lira1          ent                    dd=no  auc=0.5295 best=0.5295 gap=2.95   mean lr mem=0.060 non=-0.123
+vran_computing    random_forest lira1          margin                 dd=no  auc=0.5076 best=0.5076 gap=0.76   mean lr mem=0.152 non=-0.404
+vran_computing    random_forest lira1          p_true                 dd=no  auc=0.5058 best=0.5058 gap=0.58   mean lr mem=0.534 non=-2.162
+vran_computing    random_forest lira1          nll                    dd=no  auc=0.5059 best=0.5059 gap=0.59   mean lr mem=1.509 non=-28.810
+vran_computing    random_forest lira1          minp                   dd=no  auc=0.5295 best=0.5295 gap=2.95   mean lr mem=0.053 non=0.017
+vran_computing    random_forest lira1          pdg                    dd=no  auc=0.5198 best=0.5198 gap=1.98   mean lr mem=3.340 non=-398.082
+vran_computing    random_forest lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5307 best=0.5307 gap=3.07   mean of per-feature log-LRs
+  rf+shadow block 5.1s
+vran_computing    random_forest threshold1     conf                   dd=yes auc=0.5300 best=0.5300 gap=3.00   mean mem=0.98118 non=0.96624 sd=0.05809/0.09496 tpr@fpr1%=0.000
+vran_computing    random_forest threshold1     ent                    dd=yes auc=0.4701 best=0.5300 gap=3.00   mean mem=0.05172 non=0.07572 sd=0.13545/0.17745 tpr@fpr1%=0.000
+vran_computing    random_forest threshold1     margin                 dd=yes auc=0.5300 best=0.5300 gap=3.00   mean mem=0.96236 non=0.93247 sd=0.11618/0.18992 tpr@fpr1%=0.000
+vran_computing    random_forest lr_meta        conf+ent+margin        dd=yes auc=0.5108 best=0.5108 gap=1.08   n_attack=21536 held-out
+  dedup removed 162/16200 test rows
+vran_computing    numpy_nodp   generalization                        dd=no  auc=0.0000 best=0.0000 gap=-0.01  train_acc=0.9636 test_acc=0.9637 gap=-0.0001
+vran_computing    numpy_nodp   shipped        conf+ent+margin        dd=no  auc=0.5037 best=0.5037 gap=0.37   library implementation, unchanged
+vran_computing    numpy_nodp   threshold1     conf                   dd=no  auc=0.4955 best=0.5044 gap=0.45   mean mem=0.96543 non=0.96660 sd=0.09711/0.09583 tpr@fpr1%=0.013
+vran_computing    numpy_nodp   threshold1     ent                    dd=no  auc=0.5044 best=0.5044 gap=0.45   mean mem=0.07540 non=0.07286 sd=0.18186/0.17889 tpr@fpr1%=0.013
+vran_computing    numpy_nodp   threshold1     margin                 dd=no  auc=0.4955 best=0.5044 gap=0.45   mean mem=0.93086 non=0.93321 sd=0.19423/0.19166 tpr@fpr1%=0.013
+vran_computing    numpy_nodp   threshold1     p_true                 dd=no  auc=0.4956 best=0.5044 gap=0.44   mean mem=0.95160 non=0.95314 sd=0.14872/0.14684 tpr@fpr1%=0.013
+vran_computing    numpy_nodp   threshold1     nll                    dd=no  auc=0.5044 best=0.5044 gap=0.44   mean mem=0.07596 non=0.07389 sd=0.29319/0.29285 tpr@fpr1%=0.013
+vran_computing    numpy_nodp   threshold1     minp                   dd=no  auc=0.4955 best=0.5044 gap=0.45   mean mem=10.71969 non=10.79225 sd=5.73000/5.68245 tpr@fpr1%=0.013
+vran_computing    numpy_nodp   threshold1     pdg                    dd=no  auc=0.5001 best=0.5001 gap=0.01   mean mem=0.01383 non=0.01346 sd=0.08643/0.08525 tpr@fpr1%=0.011
+vran_computing    numpy_nodp   lr_meta        conf+ent+margin        dd=no  auc=0.5037 best=0.5037 gap=0.37   n_attack=21600 held-out
+vran_computing    numpy_nodp   lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5045 best=0.5045 gap=0.45   n_attack=21600 held-out
+vran_computing    numpy_nodp   lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5035 best=0.5035 gap=0.35   n_attack=21600 held-out
+vran_computing    numpy_nodp   ssa8           conf+ent+margin        dd=no  auc=0.5027 best=0.5027 gap=0.27   shadow meta, acc_on_shadow=0.5019
+vran_computing    numpy_nodp   ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4994 best=0.5006 gap=0.06   shadow meta, acc_on_shadow=0.5041
+vran_computing    numpy_nodp   lira1          conf                   dd=no  auc=0.5027 best=0.5027 gap=0.27   mean lr mem=0.003 non=0.003
+vran_computing    numpy_nodp   lira1          ent                    dd=no  auc=0.5027 best=0.5027 gap=0.27   mean lr mem=0.004 non=0.003
+vran_computing    numpy_nodp   lira1          margin                 dd=no  auc=0.5027 best=0.5027 gap=0.27   mean lr mem=0.003 non=0.003
+vran_computing    numpy_nodp   lira1          p_true                 dd=no  auc=0.4998 best=0.5002 gap=0.02   mean lr mem=-0.006 non=-0.007
+vran_computing    numpy_nodp   lira1          nll                    dd=no  auc=0.4994 best=0.5006 gap=0.06   mean lr mem=-0.017 non=-0.021
+vran_computing    numpy_nodp   lira1          minp                   dd=no  auc=0.4980 best=0.5020 gap=0.20   mean lr mem=0.009 non=0.009
+vran_computing    numpy_nodp   lira1          pdg                    dd=no  auc=0.5003 best=0.5003 gap=0.03   mean lr mem=-0.020 non=-0.022
+vran_computing    numpy_nodp   lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5004 best=0.5004 gap=0.04   mean of per-feature log-LRs
+vran_computing    numpy_nodp   timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 1.74s
+vran_computing    dp_eps8      generalization                        dd=no  auc=0.0000 best=0.0000 gap=0.00   train_acc=0.9634 test_acc=0.9633 gap=0.0000
+vran_computing    dp_eps8      shipped        conf+ent+margin        dd=no  auc=0.5060 best=0.5060 gap=0.60   library implementation, unchanged
+vran_computing    dp_eps8      threshold1     conf                   dd=no  auc=0.4948 best=0.5052 gap=0.52   mean mem=0.99383 non=0.99392 sd=0.02559/0.02559 tpr@fpr1%=0.011
+vran_computing    dp_eps8      threshold1     ent                    dd=no  auc=0.5052 best=0.5052 gap=0.52   mean mem=0.02254 non=0.02209 sd=0.07076/0.07053 tpr@fpr1%=0.011
+vran_computing    dp_eps8      threshold1     margin                 dd=no  auc=0.4948 best=0.5052 gap=0.52   mean mem=0.98765 non=0.98784 sd=0.05118/0.05117 tpr@fpr1%=0.011
+vran_computing    dp_eps8      threshold1     p_true                 dd=no  auc=0.4948 best=0.5052 gap=0.52   mean mem=0.96184 non=0.96224 sd=0.17670/0.17591 tpr@fpr1%=0.011
+vran_computing    dp_eps8      threshold1     nll                    dd=no  auc=0.5052 best=0.5052 gap=0.52   mean mem=0.12588 non=0.12402 sd=0.66507/0.65926 tpr@fpr1%=0.011
+vran_computing    dp_eps8      threshold1     minp                   dd=no  auc=0.4948 best=0.5052 gap=0.52   mean mem=12.34726 non=12.43637 sd=5.98064/5.95886 tpr@fpr1%=0.011
+vran_computing    dp_eps8      threshold1     pdg                    dd=no  auc=0.5000 best=0.5000 gap=0.00   mean mem=0.03199 non=0.03168 sd=0.16606/0.16479 tpr@fpr1%=0.010
+vran_computing    dp_eps8      lr_meta        conf+ent+margin        dd=no  auc=0.5060 best=0.5060 gap=0.60   n_attack=21600 held-out
+vran_computing    dp_eps8      lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5059 best=0.5059 gap=0.59   n_attack=21600 held-out
+vran_computing    dp_eps8      lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5063 best=0.5063 gap=0.63   n_attack=21600 held-out
+vran_computing    dp_eps8      ssa8           conf+ent+margin        dd=no  auc=0.5043 best=0.5043 gap=0.43   shadow meta, acc_on_shadow=0.5019
+vran_computing    dp_eps8      ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4956 best=0.5044 gap=0.44   shadow meta, acc_on_shadow=0.5041
+vran_computing    dp_eps8      lira1          conf                   dd=no  auc=0.5043 best=0.5043 gap=0.43   mean lr mem=-0.010 non=-0.010
+vran_computing    dp_eps8      lira1          ent                    dd=no  auc=0.5043 best=0.5043 gap=0.43   mean lr mem=-0.010 non=-0.010
+vran_computing    dp_eps8      lira1          margin                 dd=no  auc=0.5043 best=0.5043 gap=0.43   mean lr mem=-0.010 non=-0.010
+vran_computing    dp_eps8      lira1          p_true                 dd=no  auc=0.5058 best=0.5058 gap=0.58   mean lr mem=-0.020 non=-0.021
+vran_computing    dp_eps8      lira1          nll                    dd=no  auc=0.5061 best=0.5061 gap=0.61   mean lr mem=-0.262 non=-0.281
+vran_computing    dp_eps8      lira1          minp                   dd=no  auc=0.4947 best=0.5053 gap=0.53   mean lr mem=0.010 non=0.010
+vran_computing    dp_eps8      lira1          pdg                    dd=no  auc=0.5007 best=0.5007 gap=0.07   mean lr mem=-0.127 non=-0.133
+vran_computing    dp_eps8      lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4958 best=0.5042 gap=0.42   mean of per-feature log-LRs
+vran_computing    dp_eps8      timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 2.63s
+vran_computing    dp_eps1      generalization                        dd=no  auc=0.0000 best=0.0000 gap=-0.19  train_acc=0.9578 test_acc=0.9597 gap=-0.0019
+vran_computing    dp_eps1      shipped        conf+ent+margin        dd=no  auc=0.5062 best=0.5062 gap=0.62   library implementation, unchanged
+vran_computing    dp_eps1      threshold1     conf                   dd=no  auc=0.4951 best=0.5049 gap=0.49   mean mem=0.99489 non=0.99504 sd=0.03719/0.03640 tpr@fpr1%=0.010
+vran_computing    dp_eps1      threshold1     ent                    dd=no  auc=0.5067 best=0.5067 gap=0.67   mean mem=0.01220 non=0.01189 sd=0.07384/0.07300 tpr@fpr1%=0.010
+vran_computing    dp_eps1      threshold1     margin                 dd=no  auc=0.4951 best=0.5049 gap=0.49   mean mem=0.98978 non=0.99008 sd=0.07439/0.07280 tpr@fpr1%=0.010
+vran_computing    dp_eps1      threshold1     p_true                 dd=no  auc=0.4952 best=0.5048 gap=0.48   mean mem=0.95712 non=0.95857 sd=0.19324/0.19001 tpr@fpr1%=0.010
+vran_computing    dp_eps1      threshold1     nll                    dd=no  auc=0.5048 best=0.5048 gap=0.48   mean mem=0.48372 non=0.46847 sd=2.93759/2.89642 tpr@fpr1%=0.010
+vran_computing    dp_eps1      threshold1     minp                   dd=no  auc=0.4936 best=0.5064 gap=0.64   mean mem=24.35996 non=24.43056 sd=6.87296/6.80329 tpr@fpr1%=0.010
+vran_computing    dp_eps1      threshold1     pdg                    dd=no  auc=0.5009 best=0.5009 gap=0.09   mean mem=0.03777 non=0.03647 sd=0.18569/0.18276 tpr@fpr1%=0.010
+vran_computing    dp_eps1      lr_meta        conf+ent+margin        dd=no  auc=0.5062 best=0.5062 gap=0.62   n_attack=21600 held-out
+vran_computing    dp_eps1      lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.5061 best=0.5061 gap=0.61   n_attack=21600 held-out
+vran_computing    dp_eps1      lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4922 best=0.5078 gap=0.78   n_attack=21600 held-out
+vran_computing    dp_eps1      ssa8           conf+ent+margin        dd=no  auc=0.5049 best=0.5049 gap=0.48   shadow meta, acc_on_shadow=0.5019
+vran_computing    dp_eps1      ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4950 best=0.5050 gap=0.50   shadow meta, acc_on_shadow=0.5041
+vran_computing    dp_eps1      lira1          conf                   dd=no  auc=0.5029 best=0.5029 gap=0.29   mean lr mem=-0.009 non=-0.009
+vran_computing    dp_eps1      lira1          ent                    dd=no  auc=0.5024 best=0.5024 gap=0.24   mean lr mem=-0.010 non=-0.010
+vran_computing    dp_eps1      lira1          margin                 dd=no  auc=0.5028 best=0.5028 gap=0.28   mean lr mem=-0.009 non=-0.009
+vran_computing    dp_eps1      lira1          p_true                 dd=no  auc=0.5024 best=0.5024 gap=0.24   mean lr mem=-0.026 non=-0.026
+vran_computing    dp_eps1      lira1          nll                    dd=no  auc=0.5027 best=0.5027 gap=0.27   mean lr mem=-5.838 non=-5.945
+vran_computing    dp_eps1      lira1          minp                   dd=no  auc=0.5015 best=0.5015 gap=0.15   mean lr mem=0.017 non=0.017
+vran_computing    dp_eps1      lira1          pdg                    dd=no  auc=0.4999 best=0.5001 gap=0.01   mean lr mem=-0.164 non=-0.167
+vran_computing    dp_eps1      lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5006 best=0.5006 gap=0.06   mean of per-feature log-LRs
+vran_computing    dp_eps1      timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 2.71s
+vran_computing    dp_eps0.1    generalization                        dd=no  auc=0.0000 best=0.0000 gap=0.06   train_acc=0.9476 test_acc=0.9470 gap=0.0006
+vran_computing    dp_eps0.1    shipped        conf+ent+margin        dd=no  auc=0.5001 best=0.5001 gap=0.01   library implementation, unchanged
+vran_computing    dp_eps0.1    threshold1     conf                   dd=no  auc=0.5000 best=0.5000 gap=0.00   mean mem=0.99997 non=0.99995 sd=0.00259/0.00456 tpr@fpr1%=0.001
+vran_computing    dp_eps0.1    threshold1     ent                    dd=no  auc=0.5001 best=0.5001 gap=0.01   mean mem=0.00007 non=0.00009 sd=0.00569/0.00746 tpr@fpr1%=0.003
+vran_computing    dp_eps0.1    threshold1     margin                 dd=no  auc=0.5000 best=0.5000 gap=0.00   mean mem=0.99994 non=0.99990 sd=0.00518/0.00913 tpr@fpr1%=0.002
+vran_computing    dp_eps0.1    threshold1     p_true                 dd=no  auc=0.5003 best=0.5003 gap=0.03   mean mem=0.94761 non=0.94699 sd=0.22276/0.22398 tpr@fpr1%=0.000
+vran_computing    dp_eps0.1    threshold1     nll                    dd=no  auc=0.4997 best=0.5003 gap=0.03   mean mem=1.43953 non=1.45824 sd=6.13343/6.17417 tpr@fpr1%=0.000
+vran_computing    dp_eps0.1    threshold1     minp                   dd=no  auc=0.4999 best=0.5001 gap=0.01   mean mem=27.61596 non=27.62034 sd=0.52894/0.45708 tpr@fpr1%=0.003
+vran_computing    dp_eps0.1    threshold1     pdg                    dd=no  auc=0.4997 best=0.5003 gap=0.03   mean mem=0.05236 non=0.05296 sd=0.22274/0.22394 tpr@fpr1%=0.000
+vran_computing    dp_eps0.1    lr_meta        conf+ent+margin        dd=no  auc=0.5001 best=0.5001 gap=0.01   n_attack=21600 held-out
+vran_computing    dp_eps0.1    lr_meta        p_true+nll+minp+pdg    dd=no  auc=0.4981 best=0.5019 gap=0.19   n_attack=21600 held-out
+vran_computing    dp_eps0.1    lr_meta        conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.4981 best=0.5019 gap=0.19   n_attack=21600 held-out
+vran_computing    dp_eps0.1    ssa8           conf+ent+margin        dd=no  auc=0.5002 best=0.5002 gap=0.02   shadow meta, acc_on_shadow=0.5019
+vran_computing    dp_eps0.1    ssa8           conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5003 best=0.5003 gap=0.03   shadow meta, acc_on_shadow=0.5041
+vran_computing    dp_eps0.1    lira1          conf                   dd=no  auc=0.5003 best=0.5003 gap=0.03   mean lr mem=-0.010 non=-0.010
+vran_computing    dp_eps0.1    lira1          ent                    dd=no  auc=0.5001 best=0.5001 gap=0.01   mean lr mem=-0.012 non=-0.012
+vran_computing    dp_eps0.1    lira1          margin                 dd=no  auc=0.5004 best=0.5004 gap=0.04   mean lr mem=-0.010 non=-0.010
+vran_computing    dp_eps0.1    lira1          p_true                 dd=no  auc=0.5005 best=0.5005 gap=0.05   mean lr mem=-0.039 non=-0.039
+vran_computing    dp_eps0.1    lira1          nll                    dd=no  auc=0.5004 best=0.5004 gap=0.04   mean lr mem=-26.309 non=-26.902
+vran_computing    dp_eps0.1    lira1          minp                   dd=no  auc=0.5000 best=0.5000 gap=0.00   mean lr mem=0.017 non=0.017
+vran_computing    dp_eps0.1    lira1          pdg                    dd=no  auc=0.5004 best=0.5004 gap=0.04   mean lr mem=-0.248 non=-0.252
+vran_computing    dp_eps0.1    lira_avg       conf+ent+margin+p_true+nll+minp+pdg dd=no  auc=0.5004 best=0.5004 gap=0.04   mean of per-feature log-LRs
+vran_computing    dp_eps0.1    timing                                dd=no  auc=0.0000 best=0.0000 gap=       fit+attacks 2.49s
+vran_computing done 15.8s
+DONE -> E:\可信AI\py\_research\mia_variants.csv

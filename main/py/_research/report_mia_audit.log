@@ -1,0 +1,331 @@
+privacy summary: {'membership_inference_auc': 0.5641055555555555, 'mia_shadow_auc': 0.5596786666666668, 'mia_lira_auc': 0.5037053333333333, 'mia_conf_only_auc': 0.5612333333333334, 'mia_ks': 0.1100000000000001, 'mia_tpr_at_1pct_fpr': 0.01, 'mia_n_shadows': 4}
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 30495 (\N{CJK UNIFIED IDEOGRAPH-771F}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 23454 (\N{CJK UNIFIED IDEOGRAPH-5B9E}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 28151 (\N{CJK UNIFIED IDEOGRAPH-6DF7}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 28102 (\N{CJK UNIFIED IDEOGRAPH-6DC6}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 30697 (\N{CJK UNIFIED IDEOGRAPH-77E9}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 38453 (\N{CJK UNIFIED IDEOGRAPH-9635}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 39044 (\N{CJK UNIFIED IDEOGRAPH-9884}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 27979 (\N{CJK UNIFIED IDEOGRAPH-6D4B}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 29305 (\N{CJK UNIFIED IDEOGRAPH-7279}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24449 (\N{CJK UNIFIED IDEOGRAPH-5F81}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24179 (\N{CJK UNIFIED IDEOGRAPH-5E73}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 22343 (\N{CJK UNIFIED IDEOGRAPH-5747}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20934 (\N{CJK UNIFIED IDEOGRAPH-51C6}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 30830 (\N{CJK UNIFIED IDEOGRAPH-786E}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 29575 (\N{CJK UNIFIED IDEOGRAPH-7387}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25915 (\N{CJK UNIFIED IDEOGRAPH-653B}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20987 (\N{CJK UNIFIED IDEOGRAPH-51FB}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 27604 (\N{CJK UNIFIED IDEOGRAPH-6BD4}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24178 (\N{CJK UNIFIED IDEOGRAPH-5E72}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20928 (\N{CJK UNIFIED IDEOGRAPH-51C0}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 21463 (\N{CJK UNIFIED IDEOGRAPH-53D7}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26631 (\N{CJK UNIFIED IDEOGRAPH-6807}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 35760 (\N{CJK UNIFIED IDEOGRAPH-8BB0}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 29575 (\N{CJK UNIFIED IDEOGRAPH-7387}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 65288 (\N{FULLWIDTH LEFT PARENTHESIS}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 36873 (\N{CJK UNIFIED IDEOGRAPH-9009}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25321 (\N{CJK UNIFIED IDEOGRAPH-62E9}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 65289 (\N{FULLWIDTH RIGHT PARENTHESIS}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25353 (\N{CJK UNIFIED IDEOGRAPH-6309}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20998 (\N{CJK UNIFIED IDEOGRAPH-5206}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 32452 (\N{CJK UNIFIED IDEOGRAPH-7EC4}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 30340 (\N{CJK UNIFIED IDEOGRAPH-7684}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20844 (\N{CJK UNIFIED IDEOGRAPH-516C}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24179 (\N{CJK UNIFIED IDEOGRAPH-5E73}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24615 (\N{CJK UNIFIED IDEOGRAPH-6027}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20934 (\N{CJK UNIFIED IDEOGRAPH-51C6}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 30830 (\N{CJK UNIFIED IDEOGRAPH-786E}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 38544 (\N{CJK UNIFIED IDEOGRAPH-9690}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 31169 (\N{CJK UNIFIED IDEOGRAPH-79C1}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25928 (\N{CJK UNIFIED IDEOGRAPH-6548}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 29992 (\N{CJK UNIFIED IDEOGRAPH-7528}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26435 (\N{CJK UNIFIED IDEOGRAPH-6743}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 34913 (\N{CJK UNIFIED IDEOGRAPH-8861}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 39044 (\N{CJK UNIFIED IDEOGRAPH-9884}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 31639 (\N{CJK UNIFIED IDEOGRAPH-7B97}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26080 (\N{CJK UNIFIED IDEOGRAPH-65E0}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20445 (\N{CJK UNIFIED IDEOGRAPH-4FDD}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25252 (\N{CJK UNIFIED IDEOGRAPH-62A4}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 22522 (\N{CJK UNIFIED IDEOGRAPH-57FA}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 32447 (\N{CJK UNIFIED IDEOGRAPH-7EBF}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+layperson  zh  -> layperson_zh.pdf (494 KB)
+layperson  en  -> layperson_en.pdf (298 KB)
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26679 (\N{CJK UNIFIED IDEOGRAPH-6837}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26412 (\N{CJK UNIFIED IDEOGRAPH-672C}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25968 (\N{CJK UNIFIED IDEOGRAPH-6570}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 31867 (\N{CJK UNIFIED IDEOGRAPH-7C7B}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 21035 (\N{CJK UNIFIED IDEOGRAPH-522B}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 22343 (\N{CJK UNIFIED IDEOGRAPH-5747}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 34913 (\N{CJK UNIFIED IDEOGRAPH-8861}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 29305 (\N{CJK UNIFIED IDEOGRAPH-7279}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24449 (\N{CJK UNIFIED IDEOGRAPH-5F81}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20998 (\N{CJK UNIFIED IDEOGRAPH-5206}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24067 (\N{CJK UNIFIED IDEOGRAPH-5E03}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24179 (\N{CJK UNIFIED IDEOGRAPH-5E73}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25490 (\N{CJK UNIFIED IDEOGRAPH-6392}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 21015 (\N{CJK UNIFIED IDEOGRAPH-5217}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 37325 (\N{CJK UNIFIED IDEOGRAPH-91CD}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 35201 (\N{CJK UNIFIED IDEOGRAPH-8981}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24615 (\N{CJK UNIFIED IDEOGRAPH-6027}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 65288 (\N{FULLWIDTH LEFT PARENTHESIS}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20934 (\N{CJK UNIFIED IDEOGRAPH-51C6}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 30830 (\N{CJK UNIFIED IDEOGRAPH-786E}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 29575 (\N{CJK UNIFIED IDEOGRAPH-7387}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 65289 (\N{FULLWIDTH RIGHT PARENTHESIS}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 19979 (\N{CJK UNIFIED IDEOGRAPH-4E0B}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 38477 (\N{CJK UNIFIED IDEOGRAPH-964D}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25915 (\N{CJK UNIFIED IDEOGRAPH-653B}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20987 (\N{CJK UNIFIED IDEOGRAPH-51FB}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 27604 (\N{CJK UNIFIED IDEOGRAPH-6BD4}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24178 (\N{CJK UNIFIED IDEOGRAPH-5E72}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20928 (\N{CJK UNIFIED IDEOGRAPH-51C0}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 21463 (\N{CJK UNIFIED IDEOGRAPH-53D7}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 40065 (\N{CJK UNIFIED IDEOGRAPH-9C81}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26834 (\N{CJK UNIFIED IDEOGRAPH-68D2}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25200 (\N{CJK UNIFIED IDEOGRAPH-6270}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 21160 (\N{CJK UNIFIED IDEOGRAPH-52A8}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 39044 (\N{CJK UNIFIED IDEOGRAPH-9884}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 31639 (\N{CJK UNIFIED IDEOGRAPH-7B97}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26631 (\N{CJK UNIFIED IDEOGRAPH-6807}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24046 (\N{CJK UNIFIED IDEOGRAPH-5DEE}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 21333 (\N{CJK UNIFIED IDEOGRAPH-5355}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20301 (\N{CJK UNIFIED IDEOGRAPH-4F4D}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 35760 (\N{CJK UNIFIED IDEOGRAPH-8BB0}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 36873 (\N{CJK UNIFIED IDEOGRAPH-9009}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25321 (\N{CJK UNIFIED IDEOGRAPH-62E9}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25353 (\N{CJK UNIFIED IDEOGRAPH-6309}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 32452 (\N{CJK UNIFIED IDEOGRAPH-7EC4}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 30340 (\N{CJK UNIFIED IDEOGRAPH-7684}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20844 (\N{CJK UNIFIED IDEOGRAPH-516C}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24322 (\N{CJK UNIFIED IDEOGRAPH-5F02}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25351 (\N{CJK UNIFIED IDEOGRAPH-6307}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 21462 (\N{CJK UNIFIED IDEOGRAPH-53D6}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 23436 (\N{CJK UNIFIED IDEOGRAPH-5B8C}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20840 (\N{CJK UNIFIED IDEOGRAPH-5168}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 31561 (\N{CJK UNIFIED IDEOGRAPH-7B49}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 38544 (\N{CJK UNIFIED IDEOGRAPH-9690}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 31169 (\N{CJK UNIFIED IDEOGRAPH-79C1}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25928 (\N{CJK UNIFIED IDEOGRAPH-6548}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 29992 (\N{CJK UNIFIED IDEOGRAPH-7528}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26435 (\N{CJK UNIFIED IDEOGRAPH-6743}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26080 (\N{CJK UNIFIED IDEOGRAPH-65E0}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20445 (\N{CJK UNIFIED IDEOGRAPH-4FDD}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25252 (\N{CJK UNIFIED IDEOGRAPH-62A4}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 22522 (\N{CJK UNIFIED IDEOGRAPH-57FA}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 32447 (\N{CJK UNIFIED IDEOGRAPH-7EBF}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25104 (\N{CJK UNIFIED IDEOGRAPH-6210}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 21592 (\N{CJK UNIFIED IDEOGRAPH-5458}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25512 (\N{CJK UNIFIED IDEOGRAPH-63A8}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26029 (\N{CJK UNIFIED IDEOGRAPH-65AD}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 27844 (\N{CJK UNIFIED IDEOGRAPH-6CC4}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 28431 (\N{CJK UNIFIED IDEOGRAPH-6F0F}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+smo        zh  -> smo_zh.pdf (692 KB)
+smo        en  -> smo_en.pdf (595 KB)
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 30495 (\N{CJK UNIFIED IDEOGRAPH-771F}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 23454 (\N{CJK UNIFIED IDEOGRAPH-5B9E}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 28151 (\N{CJK UNIFIED IDEOGRAPH-6DF7}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 28102 (\N{CJK UNIFIED IDEOGRAPH-6DC6}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 30697 (\N{CJK UNIFIED IDEOGRAPH-77E9}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 38453 (\N{CJK UNIFIED IDEOGRAPH-9635}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 27979 (\N{CJK UNIFIED IDEOGRAPH-6D4B}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 27491 (\N{CJK UNIFIED IDEOGRAPH-6B63}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 26354 (\N{CJK UNIFIED IDEOGRAPH-66F2}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 19968 (\N{CJK UNIFIED IDEOGRAPH-4E00}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20313 (\N{CJK UNIFIED IDEOGRAPH-4F59}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20551 (\N{CJK UNIFIED IDEOGRAPH-5047}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25688 (\N{CJK UNIFIED IDEOGRAPH-6458}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 36755 (\N{CJK UNIFIED IDEOGRAPH-8F93}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20986 (\N{CJK UNIFIED IDEOGRAPH-51FA}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24433 (\N{CJK UNIFIED IDEOGRAPH-5F71}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 21709 (\N{CJK UNIFIED IDEOGRAPH-54CD}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20026 (\N{CJK UNIFIED IDEOGRAPH-4E3A}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20309 (\N{CJK UNIFIED IDEOGRAPH-4F55}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 36825 (\N{CJK UNIFIED IDEOGRAPH-8FD9}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 21028 (\N{CJK UNIFIED IDEOGRAPH-5224}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 65311 (\N{FULLWIDTH QUESTION MARK}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 24471 (\N{CJK UNIFIED IDEOGRAPH-5F97}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 65292 (\N{FULLWIDTH COMMA}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 36129 (\N{CJK UNIFIED IDEOGRAPH-8D21}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 29486 (\N{CJK UNIFIED IDEOGRAPH-732E}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 27169 (\N{CJK UNIFIED IDEOGRAPH-6A21}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 22411 (\N{CJK UNIFIED IDEOGRAPH-578B}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20559 (\N{CJK UNIFIED IDEOGRAPH-504F}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 20381 (\N{CJK UNIFIED IDEOGRAPH-4F9D}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 36182 (\N{CJK UNIFIED IDEOGRAPH-8D56}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 25239 (\N{CJK UNIFIED IDEOGRAPH-6297}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 35757 (\N{CJK UNIFIED IDEOGRAPH-8BAD}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+E:\可信AI\QtUI\trustoran_ui\pdf_report.py:250: UserWarning: Glyph 32451 (\N{CJK UNIFIED IDEOGRAPH-7EC3}) missing from font(s) DejaVu Sans.
+  fig.savefig(buf, format="png", dpi=int(dpi),
+ai         zh  -> ai_zh.pdf (1203 KB)
+ai         en  -> ai_en.pdf (1154 KB)
+
+== untranslated sentences (6) ==
+  [kv] 0.9885
+  [kv] P(class 1)
+  [kv] cci_a1sd
+  [kv] classification
+  [kv] policy_name
+  [kv] random_forest
+== untranslated labels (0) ==
+DONE

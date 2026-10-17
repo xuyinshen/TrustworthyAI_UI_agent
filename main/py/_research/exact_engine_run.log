@@ -1,0 +1,58 @@
+== cci_a1sd_binary / xgboost (expect method=exact)
+  ok   ShapResult.method == exact (got exact)
+  ok   summary.shap_method == exact (got 'exact')
+  ok   summary.shap_efficiency_max_error finite and small (got 6.284099072217941e-06)
+  ok   summary.method names the exact path
+  ok   summary is JSON-serialisable
+  ok   shap_summary title carries [exact] -- 'SHAP summary — margin of class 1 [exact]'
+  ok   shap_summary Chinese title fully translated -- 'SHAP 摘要 — 类别 1 的对数几率 [精确解]'
+  ok   shap_summary round-trips back to the English title ('SHAP summary — margin of class 1 [exact]' -> 'SHAP summary — margin of class 1 [exact]')
+  ok   shap_bar title carries [exact] -- 'Mean |SHAP| — margin of class 1 [exact]'
+  ok   shap_bar Chinese title fully translated -- '平均 |SHAP| — 类别 1 的对数几率 [精确解]'
+  ok   shap_bar round-trips back to the English title ('Mean |SHAP| — margin of class 1 [exact]' -> 'Mean |SHAP| — margin of class 1 [exact]')
+  ok   cci_a1sd_binary/xgboost: shap_mean_abs has 10 rows
+   pdf layperson  zh  -> layperson_zh.pdf (474 KB)
+   pdf layperson  en  -> layperson_en.pdf (281 KB)
+   pdf smo        zh  -> smo_zh.pdf (667 KB)
+   pdf smo        en  -> smo_en.pdf (574 KB)
+   pdf ai         zh  -> ai_zh.pdf (1023 KB)
+   pdf ai         en  -> ai_en.pdf (979 KB)
+== vran_energy / lightgbm (expect method=exact)
+  ok   ShapResult.method == exact (got exact)
+  ok   summary.shap_method == exact (got 'exact')
+  ok   summary.shap_efficiency_max_error finite and small (got 2.3447910280083306e-13)
+  ok   summary.method names the exact path
+  ok   summary is JSON-serialisable
+  ok   shap_summary title carries [exact] -- 'SHAP summary — prediction on the model margin [exact]'
+  ok   shap_summary Chinese title fully translated -- 'SHAP 摘要 — 模型 margin 上的预测值 [精确解]'
+  ok   shap_summary round-trips back to the English title ('SHAP summary — prediction on the model margin [exact]' -> 'SHAP summary — prediction on the model margin [exact]')
+  ok   shap_bar title carries [exact] -- 'Mean |SHAP| — prediction on the model margin [exact]'
+  ok   shap_bar Chinese title fully translated -- '平均 |SHAP| — 模型 margin 上的预测值 [精确解]'
+  ok   shap_bar round-trips back to the English title ('Mean |SHAP| — prediction on the model margin [exact]' -> 'Mean |SHAP| — prediction on the model margin [exact]')
+  ok   vran_energy/lightgbm: shap_mean_abs has 16 rows
+== cci_a1sd_binary / mlp (expect method=kernel)
+  ok   ShapResult.method == kernel (got kernel)
+  ok   summary.shap_method == kernel (got 'kernel')
+  ok   summary.shap_efficiency_max_error is None on the sampled path (got None)
+  ok   summary.method names the sampled path
+  ok   summary is JSON-serialisable
+  ok   shap_summary title carries [sampled] -- 'SHAP summary — P(class 1) [sampled]'
+  ok   shap_summary Chinese title fully translated -- 'SHAP 摘要 — 类别 1 的概率 [采样近似]'
+  ok   shap_summary round-trips back to the English title ('SHAP summary — P(class 1) [sampled]' -> 'SHAP summary — P(class 1) [sampled]')
+  ok   shap_bar title carries [sampled] -- 'Mean |SHAP| — P(class 1) [sampled]'
+  ok   shap_bar Chinese title fully translated -- '平均 |SHAP| — 类别 1 的概率 [采样近似]'
+  ok   shap_bar round-trips back to the English title ('Mean |SHAP| — P(class 1) [sampled]' -> 'Mean |SHAP| — P(class 1) [sampled]')
+  ok   cci_a1sd_binary/mlp: shap_mean_abs has 10 rows
+
+== untranslated sentences (5) ==
+  [kv] 0.9996
+  [kv] binary
+  [kv] cci_a1sd_binary
+  [kv] policy_name
+  [kv] xgboost
+== untranslated labels (1) ==
+  [kv] roc_auc
+
+failures: 0
+ALL CHECKS PASSED
+EXIT=0

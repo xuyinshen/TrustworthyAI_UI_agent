@@ -1,0 +1,107 @@
+== cci_a1sd  task=classification  d=10  K=3
+cci_a1sd         classification exact    xgboost            routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification exact    xgboost            exactness        | eff=2.98675e-06 rel=6.52721e-07 cos=       ms/s=          x-
+cci_a1sd         classification exact    xgboost            vs TreeExplainer | eff=           rel=           cos=1      ms/s=          x-
+cci_a1sd         classification exact    xgboost            cost exact       | eff=           rel=           cos=       ms/s=0.044702  x-
+cci_a1sd         classification kernel   xgboost            cost sampled     | eff=           rel=           cos=       ms/s=1.60606   x35.9281
+cci_a1sd         classification exact    lightgbm           routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification exact    lightgbm           exactness        | eff=1.42109e-14 rel=1.5813e-15 cos=       ms/s=          x-
+cci_a1sd         classification exact    lightgbm           vs TreeExplainer | eff=           rel=           cos=1      ms/s=          x-
+cci_a1sd         classification exact    lightgbm           cost exact       | eff=           rel=           cos=       ms/s=0.210849  x-
+cci_a1sd         classification kernel   lightgbm           cost sampled     | eff=           rel=           cos=       ms/s=2.74549   x13.0211
+cci_a1sd         classification kernel   random_forest      routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification kernel   random_forest      sampled efficien | eff=2.22045e-16 rel=           cos=       ms/s=nan       x-
+cci_a1sd         classification n/a      random_forest      exact refused    | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification kernel   hist_grad_boost    routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification kernel   hist_grad_boost    sampled efficien | eff=1.91156e-16 rel=           cos=       ms/s=nan       x-
+cci_a1sd         classification n/a      hist_grad_boost    exact refused    | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification kernel   grad_boost         routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification kernel   grad_boost         sampled efficien | eff=2.22045e-16 rel=           cos=       ms/s=nan       x-
+cci_a1sd         classification n/a      grad_boost         exact refused    | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification kernel   logistic           routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification kernel   logistic           sampled efficien | eff=1.11022e-16 rel=           cos=       ms/s=nan       x-
+cci_a1sd         classification n/a      logistic           exact refused    | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification kernel   mlp                routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd         classification kernel   mlp                sampled efficien | eff=2.22045e-16 rel=           cos=       ms/s=nan       x-
+cci_a1sd         classification n/a      mlp                exact refused    | eff=           rel=           cos=       ms/s=          x-
+== cci_a1sd_binary  task=classification  d=10  K=2
+cci_a1sd_binary  classification exact    xgboost            routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification exact    xgboost            exactness        | eff=2.3731e-06 rel=3.37286e-07 cos=       ms/s=          x-
+cci_a1sd_binary  classification exact    xgboost            vs TreeExplainer | eff=           rel=           cos=1      ms/s=          x-
+cci_a1sd_binary  classification exact    xgboost            cost exact       | eff=           rel=           cos=       ms/s=0.016372  x-
+cci_a1sd_binary  classification kernel   xgboost            cost sampled     | eff=           rel=           cos=       ms/s=1.19095   x72.7433
+cci_a1sd_binary  classification exact    lightgbm           routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification exact    lightgbm           exactness        | eff=1.95399e-14 rel=1.37854e-15 cos=       ms/s=          x-
+cci_a1sd_binary  classification exact    lightgbm           vs TreeExplainer | eff=           rel=           cos=1      ms/s=          x-
+cci_a1sd_binary  classification exact    lightgbm           cost exact       | eff=           rel=           cos=       ms/s=0.094439  x-
+cci_a1sd_binary  classification kernel   lightgbm           cost sampled     | eff=           rel=           cos=       ms/s=1.5684    x16.6075
+cci_a1sd_binary  classification kernel   random_forest      routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification kernel   random_forest      sampled efficien | eff=1.11022e-16 rel=           cos=       ms/s=nan       x-
+cci_a1sd_binary  classification n/a      random_forest      exact refused    | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification kernel   hist_grad_boost    routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification kernel   hist_grad_boost    sampled efficien | eff=2.14753e-16 rel=           cos=       ms/s=nan       x-
+cci_a1sd_binary  classification n/a      hist_grad_boost    exact refused    | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification kernel   grad_boost         routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification kernel   grad_boost         sampled efficien | eff=1.53564e-16 rel=           cos=       ms/s=nan       x-
+cci_a1sd_binary  classification n/a      grad_boost         exact refused    | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification kernel   logistic           routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification kernel   logistic           sampled efficien | eff=1.67401e-16 rel=           cos=       ms/s=nan       x-
+cci_a1sd_binary  classification n/a      logistic           exact refused    | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification kernel   mlp                routing          | eff=           rel=           cos=       ms/s=          x-
+cci_a1sd_binary  classification kernel   mlp                sampled efficien | eff=1.11022e-16 rel=           cos=       ms/s=nan       x-
+cci_a1sd_binary  classification n/a      mlp                exact refused    | eff=           rel=           cos=       ms/s=          x-
+== vran_computing  task=classification  d=7  K=2
+vran_computing   classification exact    xgboost            routing          | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification exact    xgboost            exactness        | eff=4.21703e-06 rel=4.08925e-07 cos=       ms/s=          x-
+vran_computing   classification exact    xgboost            vs TreeExplainer | eff=           rel=           cos=1      ms/s=          x-
+vran_computing   classification exact    xgboost            cost exact       | eff=           rel=           cos=       ms/s=0.058583  x-
+vran_computing   classification kernel   xgboost            cost sampled     | eff=           rel=           cos=       ms/s=1.30733   x22.3158
+vran_computing   classification exact    lightgbm           routing          | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification exact    lightgbm           exactness        | eff=2.84217e-14 rel=1.36608e-15 cos=       ms/s=          x-
+vran_computing   classification exact    lightgbm           vs TreeExplainer | eff=           rel=           cos=1      ms/s=          x-
+vran_computing   classification exact    lightgbm           cost exact       | eff=           rel=           cos=       ms/s=0.120745  x-
+vran_computing   classification kernel   lightgbm           cost sampled     | eff=           rel=           cos=       ms/s=2.04548   x16.9405
+vran_computing   classification kernel   random_forest      routing          | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification kernel   random_forest      sampled efficien | eff=5.55112e-17 rel=           cos=       ms/s=nan       x-
+vran_computing   classification n/a      random_forest      exact refused    | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification kernel   hist_grad_boost    routing          | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification kernel   hist_grad_boost    sampled efficien | eff=5.55112e-17 rel=           cos=       ms/s=nan       x-
+vran_computing   classification n/a      hist_grad_boost    exact refused    | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification kernel   grad_boost         routing          | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification kernel   grad_boost         sampled efficien | eff=5.55112e-17 rel=           cos=       ms/s=nan       x-
+vran_computing   classification n/a      grad_boost         exact refused    | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification kernel   logistic           routing          | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification kernel   logistic           sampled efficien | eff=1.11022e-16 rel=           cos=       ms/s=nan       x-
+vran_computing   classification n/a      logistic           exact refused    | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification kernel   mlp                routing          | eff=           rel=           cos=       ms/s=          x-
+vran_computing   classification kernel   mlp                sampled efficien | eff=5.55112e-17 rel=           cos=       ms/s=nan       x-
+vran_computing   classification n/a      mlp                exact refused    | eff=           rel=           cos=       ms/s=          x-
+== vran_energy  task=regression  d=16  K=1
+vran_energy      regression exact    xgboost            routing          | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression exact    xgboost            exactness        | eff=3.52645e-06 rel=2.67687e-07 cos=       ms/s=          x-
+vran_energy      regression exact    xgboost            vs TreeExplainer | eff=           rel=           cos=1      ms/s=          x-
+vran_energy      regression exact    xgboost            cost exact       | eff=           rel=           cos=       ms/s=0.124903  x-
+vran_energy      regression kernel   xgboost            cost sampled     | eff=           rel=           cos=       ms/s=1.44165   x11.5422
+vran_energy      regression exact    lightgbm           routing          | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression exact    lightgbm           exactness        | eff=1.77636e-14 rel=1.34718e-15 cos=       ms/s=          x-
+vran_energy      regression exact    lightgbm           vs TreeExplainer | eff=           rel=           cos=1      ms/s=          x-
+vran_energy      regression exact    lightgbm           cost exact       | eff=           rel=           cos=       ms/s=0.158089  x-
+vran_energy      regression kernel   lightgbm           cost sampled     | eff=           rel=           cos=       ms/s=2.22417   x14.0691
+vran_energy      regression kernel   random_forest      routing          | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression kernel   random_forest      sampled efficien | eff=5.32907e-15 rel=           cos=       ms/s=nan       x-
+vran_energy      regression n/a      random_forest      exact refused    | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression kernel   hist_grad_boost    routing          | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression kernel   hist_grad_boost    sampled efficien | eff=0          rel=           cos=       ms/s=nan       x-
+vran_energy      regression n/a      hist_grad_boost    exact refused    | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression kernel   grad_boost         routing          | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression kernel   grad_boost         sampled efficien | eff=0          rel=           cos=       ms/s=nan       x-
+vran_energy      regression n/a      grad_boost         exact refused    | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression kernel   logistic           routing          | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression kernel   logistic           sampled efficien | eff=0          rel=           cos=       ms/s=nan       x-
+vran_energy      regression n/a      logistic           exact refused    | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression kernel   mlp                routing          | eff=           rel=           cos=       ms/s=          x-
+vran_energy      regression kernel   mlp                sampled efficien | eff=1.77636e-15 rel=           cos=       ms/s=nan       x-
+vran_energy      regression n/a      mlp                exact refused    | eff=           rel=           cos=       ms/s=          x-
+
+rows: 100   failures: 0
+ALL CHECKS PASSED
