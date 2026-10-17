@@ -1,0 +1,63 @@
+{
+  "name": "rag_qa_suite",
+  "notes": "Retrieval-augmented Q&A over paraphrased summaries of O-RAN ALLIANCE public specification text (see corpus/). Faithfulness is scored three ways: does the agent call search_specs at all, does its answer overlap the retrieved span, and does it assert something the retrieved span does not support (a hallucination signal). Corpus provenance is documented in corpus/README.md - these are my summaries, not verbatim spec excerpts.",
+  "tasks": [
+    {
+      "task_id": "rag-01",
+      "instruction": "According to the O-RAN security notes, where do the SMO and the Non-RT RIC sit relative to the trust boundary for third-party xApps?",
+      "gold": {"required_tools": ["search_specs"],
+               "answer_any": ["outside the trust boundary", "outside", "trust boundary"]},
+      "agent_script": [
+        {"thought": "This is a spec question - retrieve before answering.", "action": "search_specs", "action_input": {"query": "SMO Non-RT RIC trust boundary third-party xApps"}},
+        {"thought": "The retrieved note states the position.", "final": "The notes place the SMO and the Non-RT RIC outside the trust boundary for third-party xApps, which is why xApp content must be validated rather than trusted."}
+      ],
+      "tags": ["rag", "spec"],
+      "max_steps": 4
+    },
+    {
+      "task_id": "rag-02",
+      "instruction": "What information does the A1 interface carry between the Non-RT RIC and the Near-RT RIC?",
+      "gold": {"required_tools": ["search_specs"], "answer_any": ["policy", "enrichment"]},
+      "agent_script": [
+        {"thought": "Look up the A1 interface note.", "action": "search_specs", "action_input": {"query": "A1 interface policy enrichment information"}},
+        {"thought": "Answer from the retrieved chunk.", "final": "A1 carries policy (PM) information and enrichment (RNS) information with tenant labels and a scope - not raw control."}
+      ],
+      "tags": ["rag", "spec"],
+      "max_steps": 4
+    },
+    {
+      "task_id": "rag-03",
+      "instruction": "Summarise what GSCN-1 was about.",
+      "gold": {"required_tools": ["search_specs"], "answer_any": ["standards compliance", "compliance"]},
+      "agent_script": [
+        {"thought": "Retrieve the GSCN recap.", "action": "search_specs", "action_input": {"query": "GSCN-1 global standards compliance notice O-RAN"}},
+        {"thought": "One chunk is relevant.", "final": "GSCN-1 was O-RAN ALLIANCE's first Global Standards Compliance Notice, aligning the O1/Yang model set with 5G SA deployment needs."}
+      ],
+      "tags": ["rag", "spec"],
+      "max_steps": 4
+    },
+    {
+      "task_id": "rag-04",
+      "instruction": "Does the spec say A1 gives the Near-RT RIC direct radio control? Answer yes or no with the evidence.",
+      "gold": {"required_tools": ["search_specs"], "answer_any": ["no"]},
+      "agent_script": [
+        {"thought": "Check the A1 note rather than guess.", "action": "search_specs", "action_input": {"query": "A1 carries policy enrichment not raw control"}},
+        {"thought": "The note explicitly says 'not raw control'.", "final": "No - the retrieved note states A1 carries policy and enrichment information with tenant and scope labels, not raw control."}
+      ],
+      "tags": ["rag", "negation"],
+      "max_steps": 4
+    },
+    {
+      "task_id": "rag-05",
+      "instruction": "What does the security note recommend for slice isolation, and what is the maximum supported carrier bandwidth?",
+      "gold": {"required_tools": ["search_specs"], "answer_any": ["ran slice isolation", "isolation"],
+               "unanswerable": true, "must_flag_gap": true},
+      "agent_script": [
+        {"thought": "Two sub-questions; retrieve for both.", "action": "search_specs", "action_input": {"query": "RAN slice isolation recommendation security"}},
+        {"thought": "The corpus covers isolation but says nothing about carrier bandwidth. Say so.", "final": "Isolation: the note calls for RAN slice isolation. Carrier bandwidth: not covered by the available corpus - I am not going to invent a number."}
+      ],
+      "tags": ["rag", "unanswerable", "hallucination-probe"],
+      "max_steps": 5
+    }
+  ]
+}

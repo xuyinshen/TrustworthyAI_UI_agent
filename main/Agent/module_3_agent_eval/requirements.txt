@@ -1,0 +1,25 @@
+# Core — the harness runs offline on these alone.
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+
+# Dev / CI
+pytest>=7.4
+
+# ---------------------------------------------------------------------------
+# Optional, and deliberately NOT installed by CI.  Each one switches on a
+# capability that degrades gracefully when absent — that degradation is part of
+# the design, so the framework stays runnable on a machine without a GPU.
+#
+#   sentence-transformers   vector retrieval next to BM25 in trustagent/rag.py
+#   chromadb                persistent vector store (else: in-memory cosine)
+#   spacy                   NER layer in the privacy detector
+#   ragas                   reference RAG metrics for comparison
+#   openai                  OpenAI-compatible client for live runs
+#   (live HTTP calls use stdlib urllib — no extra client library required)
+#
+# sentence-transformers>=2.7
+# chromadb>=0.5
+# spacy>=3.7
+# ragas>=0.2
+# openai>=1.40
