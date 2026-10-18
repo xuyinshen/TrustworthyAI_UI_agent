@@ -1,4 +1,4 @@
-# Trust-oRAN · 面向 Open RAN 的可信 AI 评估工具集
+# Trust-ORAN · 面向 Open RAN 的可信 AI 评估工具集
 
 在真实 Open RAN 网络数据上，评估用于控制网络的机器学习模型是否可信——可解释性、鲁棒性、公平性、隐私四个维度
 
