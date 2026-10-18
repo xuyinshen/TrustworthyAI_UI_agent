@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1020" viewBox="0 0 1440 1020" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif">
+  <defs>
+    <marker id="ar3u" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="ar3d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <marker id="ar3g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="1020" fill="#ffffff"/>
+
+  <text x="40" y="42" font-size="21" font-weight="700" fill="#0f172a">图 3　联邦协作修正：FedAvg 在一个周期外的位置</text>
+  <text x="40" y="66" font-size="13" fill="#475569">对应图 2 的「协作修正」。原始采集留在产生它的节点，跨节点只传模型参数；聚合与本地训练均不进入 500 ms 环路。</text>
+
+  <!-- agents -->
+  <g>
+    <rect x="60" y="100" width="248" height="176" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="76" y="126" font-size="13.5" font-weight="700" fill="#1d4ed8">节点 Agent_1</text>
+    <text x="76" y="148" font-size="11.5" fill="#475569">本地训练记录 11 条，特征 21 维</text>
+    <line x1="76" y1="158" x2="292" y2="158" stroke="#e2e8f0"/>
+    <text x="76" y="178" font-size="11.5" fill="#0f172a">载入本地分区，不与他节点共享样本</text>
+    <text x="76" y="198" font-size="11.5" fill="#0f172a">fit_local：5 轮本地训练，无裁剪无噪声</text>
+    <text x="76" y="218" font-size="11.5" fill="#0f172a">独立训练精度 0.900（对照值）</text>
+    <text x="76" y="242" font-size="11.5" fill="#2563eb">上传内容：W1 b1 W2 b2</text>
+    <text x="76" y="262" font-size="11.5" fill="#dc2626">不出站：原始流量采集与样本标签</text>
+
+    <rect x="332" y="100" width="248" height="176" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="348" y="126" font-size="13.5" font-weight="700" fill="#1d4ed8">节点 Agent_2</text>
+    <text x="348" y="148" font-size="11.5" fill="#475569">本地训练记录 11 条</text>
+    <line x1="348" y1="158" x2="564" y2="158" stroke="#e2e8f0"/>
+    <text x="348" y="178" font-size="11.5" fill="#0f172a">从全局参数出发继续本地迭代</text>
+    <text x="348" y="198" font-size="11.5" fill="#0f172a">数据量与 Agent_1 相同，标签分布不同</text>
+    <text x="348" y="218" font-size="11.5" fill="#0f172a">独立训练精度 0.800</text>
+    <text x="348" y="242" font-size="11.5" fill="#2563eb">上传内容：参数增量后的完整参数</text>
+    <text x="348" y="262" font-size="11.5" fill="#475569">非独立同分布是本图要处理的前提</text>
+
+    <rect x="604" y="100" width="248" height="176" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="620" y="126" font-size="13.5" font-weight="700" fill="#1d4ed8">节点 Agent_3</text>
+    <text x="620" y="148" font-size="11.5" fill="#475569">本地训练记录 9 条</text>
+    <line x1="620" y1="158" x2="836" y2="158" stroke="#e2e8f0"/>
+    <text x="620" y="178" font-size="11.5" fill="#0f172a">样本数直接参与聚合权重</text>
+    <text x="620" y="198" font-size="11.5" fill="#0f172a">独立训练精度 0.700</text>
+    <text x="620" y="222" font-size="11.5" fill="#dc2626">单节点样本不足以覆盖全部攻击形态时，</text>
+    <text x="620" y="242" font-size="11.5" fill="#dc2626">独立模型的判读会明显偏保守</text>
+
+    <rect x="876" y="100" width="248" height="176" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="892" y="126" font-size="13.5" font-weight="700" fill="#1d4ed8">节点 Agent_4</text>
+    <text x="892" y="148" font-size="11.5" fill="#475569">本地训练记录 5 条（最少）</text>
+    <line x1="892" y1="158" x2="1108" y2="158" stroke="#e2e8f0"/>
+    <text x="892" y="178" font-size="11.5" fill="#0f172a">独立训练精度 0.600（最低）</text>
+    <text x="892" y="202" font-size="11.5" fill="#b45309">该节点是聚合收益的主要来源：</text>
+    <text x="892" y="222" font-size="11.5" fill="#b45309">借全局参数获得本地没有的判别边界</text>
+    <text x="892" y="246" font-size="11.5" fill="#475569">权重占比 5/44，不主导聚合结果</text>
+
+    <rect x="1148" y="100" width="232" height="176" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="1164" y="126" font-size="13.5" font-weight="700" fill="#1d4ed8">节点 Agent_5</text>
+    <text x="1164" y="148" font-size="11.5" fill="#475569">本地训练记录 8 条</text>
+    <line x1="1164" y1="158" x2="1364" y2="158" stroke="#e2e8f0"/>
+    <text x="1164" y="178" font-size="11.5" fill="#0f172a">独立训练精度 0.750</text>
+    <text x="1164" y="202" font-size="11.5" fill="#475569">五节点合计 44 条训练记录，</text>
+    <text x="1164" y="222" font-size="11.5" fill="#475569">测试集为共享保留集，不参与训练</text>
+  </g>
+
+  <!-- arrows up -->
+  <g stroke="#2563eb" stroke-width="1.5">
+    <line x1="184" y1="276" x2="184" y2="352" marker-end="url(#ar3u)"/>
+    <line x1="456" y1="276" x2="456" y2="352" marker-end="url(#ar3u)"/>
+    <line x1="728" y1="276" x2="728" y2="352" marker-end="url(#ar3u)"/>
+    <line x1="1000" y1="276" x2="1000" y2="352" marker-end="url(#ar3u)"/>
+    <line x1="1264" y1="276" x2="1264" y2="352" marker-end="url(#ar3u)"/>
+  </g>
+  <text x="200" y="312" font-size="11.5" fill="#2563eb">上传参数</text>
+  <text x="200" y="330" font-size="11.5" fill="#64748b">4 组矩阵/向量，按样本数加权</text>
+
+  <!-- aggregator -->
+  <rect x="60" y="354" width="1320" height="112" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="80" y="382" font-size="14" font-weight="700" fill="#1d4ed8">聚合中心　_weighted_average(param_lists, sizes)</text>
+  <text x="80" y="406" font-size="12" fill="#0f172a">每轮：把五份参数按各自样本数加权求和，写回全局网络；随后在共享保留集上评估并记录该轮精度。</text>
+  <text x="80" y="428" font-size="12" fill="#475569">中心看不到任何一条原始样本，只看到参数张量；因此隐私支柱的「不出站」判断在协作路径上同样成立。</text>
+  <text x="80" y="450" font-size="12" fill="#b45309">聚合本身不含噪声与裁剪。要叠加差分隐私，需在每个节点本地先做梯度裁剪与高斯加噪，再上传（见下方组合关系）。</text>
+
+  <!-- round axis -->
+  <rect x="60" y="486" width="660" height="240" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="76" y="512" font-size="13.5" font-weight="700" fill="#0f172a">逐轮全局精度（实测，8 轮）</text>
+  <g font-size="11" fill="#64748b">
+    <text x="76" y="566">1.00</text><text x="76" y="626">0.90</text><text x="76" y="686">0.80</text><text x="76" y="716">0.75</text>
+  </g>
+  <line x1="120" y1="562" x2="700" y2="562" stroke="#e2e8f0"/>
+  <line x1="120" y1="622" x2="700" y2="622" stroke="#e2e8f0"/>
+  <line x1="120" y1="682" x2="700" y2="682" stroke="#e2e8f0"/>
+  <polyline points="140,682 210,562 280,562 350,562 420,562 490,562 560,562 630,562"
+            fill="none" stroke="#1d4ed8" stroke-width="2.5"/>
+  <g fill="#1d4ed8">
+    <circle cx="140" cy="682" r="4"/><circle cx="210" cy="562" r="4"/><circle cx="280" cy="562" r="4"/>
+    <circle cx="350" cy="562" r="4"/><circle cx="420" cy="562" r="4"/><circle cx="490" cy="562" r="4"/>
+    <circle cx="560" cy="562" r="4"/><circle cx="630" cy="562" r="4"/>
+  </g>
+  <g font-size="10.5" fill="#475569" text-anchor="middle">
+    <text x="140" y="706">1</text><text x="210" y="706">2</text><text x="280" y="706">3</text><text x="350" y="706">4</text>
+    <text x="420" y="706">5</text><text x="490" y="706">6</text><text x="560" y="706">7</text><text x="630" y="706">8</text>
+  </g>
+  <text x="140" y="538" font-size="11.5" fill="#1d4ed8">第 1 轮 0.750</text>
+  <text x="210" y="552" font-size="11.5" fill="#1d4ed8">第 2 轮起 1.000，之后持平</text>
+  <text x="76" y="740" font-size="11.5" fill="#475569">整轮 8 次聚合总耗时 0.04 s（44 条训练记录、21 维、隐藏层 24）。</text>
+
+  <!-- baselines -->
+  <rect x="744" y="486" width="636" height="240" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="760" y="512" font-size="13.5" font-weight="700" fill="#0f172a">三种口径对照（同一数据集、同一测试集）</text>
+  <g font-size="11.5" fill="#475569">
+    <text x="760" y="546">联邦聚合</text><text x="760" y="580">集中式（数据汇聚后训练）</text>
+    <text x="760" y="614">节点独立训练（逐节点）</text><text x="760" y="690">独立训练均值</text>
+  </g>
+  <rect x="960" y="534" width="380" height="18" fill="#1d4ed8"/>
+  <rect x="960" y="568" width="380" height="18" fill="#64748b"/>
+  <text x="1350" y="548" font-size="11.5" fill="#1d4ed8" text-anchor="end">1.000</text>
+  <text x="1350" y="582" font-size="11.5" fill="#475569" text-anchor="end">1.000</text>
+  <g>
+    <rect x="960" y="602" width="342" height="14" fill="#93c5fd"/><text x="1310" y="614" font-size="10.5" fill="#1d4ed8">0.90</text>
+    <rect x="960" y="620" width="304" height="14" fill="#93c5fd"/><text x="1272" y="632" font-size="10.5" fill="#1d4ed8">0.80</text>
+    <rect x="960" y="638" width="266" height="14" fill="#93c5fd"/><text x="1234" y="650" font-size="10.5" fill="#1d4ed8">0.70</text>
+    <rect x="960" y="656" width="228" height="14" fill="#f59e0b"/><text x="1196" y="668" font-size="10.5" fill="#b45309">0.60</text>
+    <rect x="960" y="674" width="285" height="14" fill="#93c5fd"/><text x="1253" y="686" font-size="10.5" fill="#1d4ed8">0.75</text>
+  </g>
+  <rect x="960" y="702" width="285" height="18" fill="#cbd5e1"/>
+  <text x="1255" y="716" font-size="11.5" fill="#475569">0.750</text>
+
+  <!-- combination + constraints -->
+  <rect x="60" y="748" width="660" height="160" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="76" y="774" font-size="13.5" font-weight="700" fill="#5b21b6">与隐私支柱的组合关系</text>
+  <text x="76" y="798" font-size="12" fill="#0f172a">FedAvg 与 DP-SGD 都作用于自研网络，两者可串联：节点本地先做逐样本裁剪与高斯加噪，再上传参数。</text>
+  <text x="76" y="820" font-size="12" fill="#475569">串联后的隐私记账以「每个节点每轮的噪声步数」为单位，预算由最严格的一侧决定。</text>
+  <text x="76" y="842" font-size="12" fill="#475569">当前库内两条路径分开实现，聚合阶段不自动加噪；这一取舍在图上以「聚合无噪声」标注。</text>
+  <text x="76" y="872" font-size="12" font-weight="700" fill="#5b21b6">结构限制</text>
+  <text x="76" y="892" font-size="11.5" fill="#b45309">协作路径只在具备 agent 分组的数据集 profile 上启用；缺少分组键时该支柱判读为未测量，而非 0。</text>
+
+  <!-- remediation linkage -->
+  <rect x="744" y="748" width="636" height="160" rx="8" fill="#ffffff" stroke="#0f766e" stroke-width="1.5"/>
+  <text x="760" y="774" font-size="13.5" font-weight="700" fill="#0f172a">在闭环中的进出位置</text>
+  <text x="760" y="798" font-size="12" fill="#475569">进入条件：分组公平差距超限，或某节点独立精度与全局差距持续扩大。</text>
+  <text x="760" y="820" font-size="12" fill="#475569">产出：一份全局参数，交图 2 的第⑤步在共享保留集上过四支柱门禁。</text>
+  <text x="760" y="842" font-size="12" fill="#475569">门禁关注点：聚合模型不得在样本最少节点对应的那类流量上退化，否则视为把偏差平均掉了。</text>
+  <text x="760" y="864" font-size="12" fill="#475569">失败回退：保留当前上线模型，记录各节点权重与轮次精度供复核。</text>
+  <text x="760" y="892" font-size="11.5" fill="#0f766e">耗时特征：单次全流程 0.04 s，是三类专业修正动作里最快的一项，可较短周期执行。</text>
+
+  <path d="M390 466 L390 486" stroke="#475569" stroke-width="1.5" marker-end="url(#ar3g)"/>
+  <path d="M1062 466 L1062 486" stroke="#475569" stroke-width="1.5" marker-end="url(#ar3g)"/>
+  <path d="M390 726 L390 748" stroke="#475569" stroke-width="1.5" marker-end="url(#ar3g)"/>
+  <path d="M1062 726 L1062 748" stroke="#475569" stroke-width="1.5" marker-end="url(#ar3g)"/>
+
+  <line x1="40" y1="932" x2="1400" y2="932" stroke="#cbd5e1"/>
+  <text x="40" y="956" font-size="11.5" fill="#64748b">读数来源：trustoran/trust/privacy.py 的 fedavg，数据集 ddos_pcap（按 agent 分组，5 节点，44 条训练记录，21 维，3 类），seed 42，本地 5 轮 × 全局 8 轮。</text>
+  <text x="40" y="978" font-size="11.5" fill="#64748b">口径说明：联邦 1.000 与集中式 1.000 持平，该数据集随机森林基线本身即 1.000，因此结论表述为「持平集中式」，不用于论证困难任务上的收益。</text>
+  <text x="40" y="1000" font-size="11.5" fill="#64748b">样本量提醒：单节点最少 5 条记录，独立精度读数在该节点上属于小样本估计，图中逐条列出以便核对分母。</text>
+</svg>

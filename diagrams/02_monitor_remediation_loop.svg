@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="940" viewBox="0 0 1440 940" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif">
+  <defs>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="940" fill="#ffffff"/>
+
+  <text x="40" y="42" font-size="21" font-weight="700" fill="#0f172a">图 2　监测—修正—回归验证的跨周期闭环</text>
+  <text x="40" y="66" font-size="13" fill="#475569">分层依据：单事件监测与判定落在 Near-RT RIC（10 ms~1 s）；重训、全量评估与发布落在 Non-RT RIC（1 s 以上）。基础模型在被修正前后始终跑在同一条在线通路上。</text>
+
+  <!-- tier bands -->
+  <rect x="40" y="92" width="1360" height="196" rx="8" fill="#f0f9ff" stroke="#bae6fd"/>
+  <text x="56" y="116" font-size="13" font-weight="700" fill="#0369a1">Near-RT RIC　环路周期 500 ms（控制台 normal 档）</text>
+  <rect x="40" y="300" width="1360" height="450" rx="8" fill="#fefce8" stroke="#fde68a"/>
+  <text x="56" y="324" font-size="13" font-weight="700" fill="#a16207">Non-RT RIC　触发式或周期性，单次 0.04 s ~ 106 s（按动作与数据规模，实测）</text>
+
+  <!-- stage 1 monitor -->
+  <rect x="70" y="132" width="300" height="140" rx="6" fill="#ffffff" stroke="#0f766e" stroke-width="1.5"/>
+  <text x="86" y="156" font-size="14" font-weight="700" fill="#0f172a">① 在线监测（四支柱）</text>
+  <text x="86" y="178" font-size="11.5" fill="#475569">逐事件：判定 + 决策间隔 margin</text>
+  <text x="86" y="196" font-size="11.5" fill="#475569">逐告警：LIME 归因前 3 特征</text>
+  <text x="86" y="214" font-size="11.5" fill="#475569">滚动窗口：robust_rate（margin ≥ 0.20）</text>
+  <text x="86" y="232" font-size="11.5" fill="#475569">分组累积：agent 检测率 max−min</text>
+  <text x="86" y="250" font-size="11.5" fill="#475569">姿态：特征不出站 + 离线成员推断 AUC</text>
+
+  <rect x="420" y="132" width="300" height="140" rx="6" fill="#ffffff" stroke="#0f766e" stroke-width="1.5"/>
+  <text x="436" y="156" font-size="14" font-weight="700" fill="#0f172a">② 触发判据（超限即申请修正）</text>
+  <text x="436" y="178" font-size="11.5" fill="#475569">鲁棒：margin 分布左移 / robust_rate 连降</text>
+  <text x="436" y="196" font-size="11.5" fill="#475569">公平：group parity gap &gt; 0.15</text>
+  <text x="436" y="214" font-size="11.5" fill="#475569">隐私：成员推断 AUC 相对基线抬升</text>
+  <text x="436" y="232" font-size="11.5" fill="#475569">解释：归因 Top 特征漂移出稳定集合</text>
+  <text x="436" y="250" font-size="11.5" fill="#475569">性能：窗口准确率跌破设定门限</text>
+
+  <rect x="770" y="132" width="300" height="140" rx="6" fill="#ffffff" stroke="#0369a1" stroke-width="1.5"/>
+  <text x="786" y="156" font-size="14" font-weight="700" fill="#0f172a">③ 证据留存（供离线阶段复核）</text>
+  <text x="786" y="178" font-size="11.5" fill="#475569">事件表与告警表按上限截断保留</text>
+  <text x="786" y="196" font-size="11.5" fill="#475569">每次触发记录：支柱、读数、阈值、时间</text>
+  <text x="786" y="214" font-size="11.5" fill="#475569">归因文本随告警落库，可回溯到判定</text>
+  <text x="786" y="232" font-size="11.5" fill="#475569">原始采集留在产生它的节点</text>
+  <text x="786" y="250" font-size="11.5" fill="#475569">离线评估以这份证据决定修正动作类型</text>
+
+  <rect x="1120" y="132" width="250" height="140" rx="6" fill="#ecfeff" stroke="#0f766e" stroke-width="1.5"/>
+  <text x="1136" y="156" font-size="14" font-weight="700" fill="#0f172a">在线通路不变</text>
+  <text x="1136" y="180" font-size="11.5" fill="#475569">修正期间，事件判定</text>
+  <text x="1136" y="198" font-size="11.5" fill="#475569">继续由当前上线模型</text>
+  <text x="1136" y="216" font-size="11.5" fill="#475569">承担，闭环不断流。</text>
+  <text x="1136" y="240" font-size="11.5" fill="#475569">单 tick 177.6 ms，</text>
+  <text x="1136" y="258" font-size="11.5" fill="#475569">占 500 ms 预算 35.5%。</text>
+
+  <line x1="370" y1="202" x2="418" y2="202" stroke="#475569" stroke-width="1.5" marker-end="url(#ar2)"/>
+  <line x1="720" y1="202" x2="768" y2="202" stroke="#475569" stroke-width="1.5" marker-end="url(#ar2)"/>
+  <line x1="1070" y1="202" x2="1118" y2="202" stroke="#475569" stroke-width="1.5" marker-end="url(#ar2)"/>
+  <line x1="1245" y1="272" x2="1245" y2="352" stroke="#475569" stroke-width="1.5" marker-end="url(#ar2)"/>
+  <text x="1255" y="316" font-size="11.5" fill="#475569">申请修正</text>
+
+  <!-- stage 4: three remediation actions -->
+  <text x="70" y="352" font-size="14" font-weight="700" fill="#0f172a">④ 修正动作（按触发的支柱选取其一或组合，均作用于基础模型或候选模型）</text>
+
+  <rect x="70" y="368" width="420" height="150" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="86" y="392" font-size="13.5" font-weight="700" fill="#991b1b">鲁棒性修正　对抗训练重训</text>
+  <text x="86" y="414" font-size="11.5" fill="#475569">以 ε=0.3 的 FGSM 样本做增广并重训，再在保留集上评估。</text>
+  <text x="86" y="432" font-size="11.5" fill="#475569">耗时：增广重训 0.11~1.32 s，单数据集最大 14.91 s（实测）。</text>
+  <text x="86" y="450" font-size="11.5" fill="#475569">增益：树系模型 FGSM 鲁棒精度 +2.6~+41.5 pp，PGD +7.5~+26.7 pp。</text>
+  <text x="86" y="468" font-size="11.5" fill="#475569">洁净精度代价 ≤1.1 pp；线性与 MLP 族在该机制下会退化。</text>
+  <text x="86" y="486" font-size="11.5" fill="#991b1b">落位 Non-RT：单次即超 1 s，不进环路。</text>
+
+  <rect x="510" y="368" width="420" height="150" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="526" y="392" font-size="13.5" font-weight="700" fill="#5b21b6">隐私修正　DP-SGD 重训</text>
+  <text x="526" y="414" font-size="11.5" fill="#475569">逐样本梯度裁剪 + 聚合高斯噪声，按 ε 预算选档。</text>
+  <text x="526" y="432" font-size="11.5" fill="#475569">实测保留效用：ε=1 时 CCI 三分类 0.8940→0.8713、二分类无损失。</text>
+  <text x="526" y="450" font-size="11.5" fill="#475569">ε=0.1 时二分类 −7.27 pp、DDoS 负载 −10 pp，需按任务取舍。</text>
+  <text x="526" y="468" font-size="11.5" fill="#475569">回归任务改用输入扰动，读数口径为 MAE 与 R² 保留率。</text>
+  <text x="526" y="486" font-size="11.5" fill="#5b21b6">落位 Non-RT：训练自研网络，不吃在线所选模型。</text>
+
+  <rect x="950" y="368" width="420" height="150" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="966" y="392" font-size="13.5" font-weight="700" fill="#1d4ed8">协作修正　FedAvg 聚合</text>
+  <text x="966" y="414" font-size="11.5" fill="#475569">各节点本地训练，只上传参数；中心按样本数加权平均。</text>
+  <text x="966" y="432" font-size="11.5" fill="#475569">实测（5 节点、44 条训练记录、21 维）：8 轮总耗时 0.04 s。</text>
+  <text x="966" y="450" font-size="11.5" fill="#475569">轮次精度 0.750 → 1.000，第 2 轮起持平；集中式同为 1.000。</text>
+  <text x="966" y="468" font-size="11.5" fill="#475569">各节点独立训练均值 0.750，最差 0.600（样本 5 条的节点）。</text>
+  <text x="966" y="486" font-size="11.5" fill="#1d4ed8">细节见 图 3。仅按 agent 分组的数据集可启用。</text>
+
+  <line x1="1245" y1="518" x2="1245" y2="546" stroke="#475569" stroke-width="1.5" marker-end="url(#ar2)"/>
+
+  <!-- stage 5 regression validation -->
+  <rect x="70" y="548" width="860" height="182" rx="6" fill="#ffffff" stroke="#0f766e" stroke-width="1.5"/>
+  <text x="86" y="574" font-size="14" font-weight="700" fill="#0f172a">⑤ 回归验证（候选模型门禁，四支柱全套 + 与当前上线模型对照）</text>
+  <text x="86" y="600" font-size="12" fill="#475569">评估内容：基础指标（准确率 / F1 / ROC-AUC 或 R² / MAE）、FGSM 与 PGD 与 DeepFool 鲁棒精度、分组公平三读数、成员推断 AUC、归因一致性。</text>
+  <text x="86" y="622" font-size="12" fill="#475569">耗时口径：四支柱 quick 全量评估 53.5 s，产出 14 图 11 表；全网格 6 数据集 × 8 模型 560.8 s，46 格中位 4.3 s。</text>
+  <text x="86" y="648" font-size="12" font-weight="700" fill="#0f172a">放行条件（同时满足）</text>
+  <text x="86" y="670" font-size="12" fill="#475569">一、洁净精度不下降超过设定容差；二、目标支柱读数改善且不依赖同一攻击自评；三、成员推断 AUC 不高于对照；四、分组差距不扩大。</text>
+  <text x="86" y="692" font-size="12" fill="#b45309">对抗训练必须用 PGD 交叉评估：增广样本由 FGSM 生成，用同一 FGSM 复评会自我证实。</text>
+  <line x1="930" y1="640" x2="968" y2="640" stroke="#475569" stroke-width="1.5" marker-end="url(#ar2)"/>
+
+  <rect x="970" y="548" width="200" height="90" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="986" y="574" font-size="13.5" font-weight="700" fill="#166534">⑥-a 通过</text>
+  <text x="986" y="598" font-size="11.5" fill="#475569">替换在线模型并</text>
+  <text x="986" y="616" font-size="11.5" fill="#475569">重置统计窗口</text>
+  <text x="986" y="632" font-size="11.5" fill="#475569">重训 2.76 s / 8000 行</text>
+
+  <rect x="1190" y="548" width="180" height="90" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="1206" y="574" font-size="13.5" font-weight="700" fill="#991b1b">⑥-b 回退</text>
+  <text x="1206" y="598" font-size="11.5" fill="#475569">保留上线模型，</text>
+  <text x="1206" y="616" font-size="11.5" fill="#475569">下调该动作档位</text>
+  <text x="1206" y="632" font-size="11.5" fill="#475569">并记录失败原因</text>
+
+  <path d="M1070 638 L1070 790 L55 790 L55 202 L68 202" fill="none" stroke="#16a34a" stroke-width="1.5"
+        stroke-dasharray="6 4" marker-end="url(#ar2)"/>
+  <text x="420" y="782" font-size="12" fill="#166534">新模型上线后，在线监测的基线读数即以它为准，统计窗口重新累积（闭环回到 ①）</text>
+
+  <!-- feedback into monitor -->
+  <path d="M1280 638 L1280 700 L1160 700 L1160 522" fill="none" stroke="#dc2626" stroke-width="1.5"
+        stroke-dasharray="6 4" marker-end="url(#ar2)"/>
+  <text x="1290" y="712" font-size="11.5" fill="#991b1b">下调档位后重试</text>
+
+  <!-- footer -->
+  <line x1="40" y1="826" x2="1400" y2="826" stroke="#cbd5e1"/>
+  <text x="40" y="850" font-size="12" font-weight="700" fill="#0f172a">分层结论</text>
+  <text x="115" y="850" font-size="12" fill="#475569">监测与判定留在 500 ms 环路内完成；三类修正动作单次均超过 1 s，属 Non-RT RIC；回归验证以整套四支柱评估为准，按窗口或事件驱动触发。</text>
+  <text x="40" y="876" font-size="11" fill="#64748b">修正动作的选择依据：触发判据指向哪个支柱，就取对应动作；同时越限时按「隐私与鲁棒优先、公平随后」的顺序排队执行，一次只改一类，避免归因混杂。</text>
+  <text x="40" y="898" font-size="11" fill="#64748b">读数来源：py/_research/adv_study.csv（32 格对抗研究与耗时）、grid.csv（46 格全网格）、mia_variants.csv（成员推断变体）。耗时随模型与数据规模变化，图中数值均标注了对应规模与参数口径。</text>
+</svg>

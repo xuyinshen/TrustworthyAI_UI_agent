@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="820" viewBox="0 0 1440 820" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="arT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="820" fill="#ffffff"/>
+
+  <text x="40" y="42" font-size="21" font-weight="700" fill="#0f172a">图 1　一个环路周期内的四支柱分工</text>
+  <text x="40" y="66" font-size="13" fill="#475569">形态：Near-RT RIC 在线监测。环路周期取自控制台 normal 档的 500 ms；单周期内不训练模型，只做判定、归因与统计累积。</text>
+
+  <!-- timeline -->
+  <line x1="250" y1="112" x2="1330" y2="112" stroke="#94a3b8" stroke-width="1"/>
+  <g font-size="11" fill="#64748b" text-anchor="middle">
+    <text x="250" y="132">0 ms</text><text x="466" y="132">100</text><text x="682" y="132">200</text>
+    <text x="898" y="132">300</text><text x="1114" y="132">400</text><text x="1330" y="132">500 ms（周期上界）</text>
+  </g>
+  <g stroke="#cbd5e1" stroke-width="1">
+    <line x1="250" y1="106" x2="250" y2="118"/><line x1="466" y1="106" x2="466" y2="118"/>
+    <line x1="682" y1="106" x2="682" y2="118"/><line x1="898" y1="106" x2="898" y2="118"/>
+    <line x1="1114" y1="106" x2="1114" y2="118"/><line x1="1330" y1="106" x2="1330" y2="118"/>
+  </g>
+
+  <!-- segment bars -->
+  <rect x="250" y="88" width="74" height="24" fill="#0f766e" opacity="0.85"/>
+  <rect x="324" y="88" width="310" height="24" fill="#b45309" opacity="0.85"/>
+  <rect x="634" y="88" width="696" height="24" fill="#e2e8f0"/>
+  <text x="287" y="82" font-size="11" fill="#0f766e" text-anchor="middle">判定 34.1 ms</text>
+  <text x="479" y="82" font-size="11" fill="#b45309" text-anchor="middle">逐事件归因 143.5 ms</text>
+  <text x="640" y="82" font-size="11" fill="#64748b">余量 322.4 ms：场景采样、事件表与图表刷新（实测合计 177.6 ms / 500 ms，占用 35.5%）</text>
+
+  <!-- lane: generation -->
+  <rect x="40" y="150" width="200" height="62" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="52" y="176" font-size="13" font-weight="700" fill="#0f172a">QTimer 触发</text>
+  <text x="52" y="196" font-size="11" fill="#64748b">console.py:731 _on_tick</text>
+  <rect x="250" y="150" width="1080" height="62" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="264" y="172" font-size="12" fill="#0f172a">事件产生：按当前场景在原型分布上采样 8 个事件（DoS 场景 n=8），逐个附带 agent 与 policy 标识。</text>
+  <text x="264" y="194" font-size="12" fill="#475569">该步骤只产出输入特征，不接触模型；agent 与 policy 两个标签同时供公平性支柱作分组键。</text>
+
+  <!-- lane: base model -->
+  <rect x="40" y="226" width="200" height="62" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="52" y="252" font-size="13" font-weight="700" fill="#0f172a">基础模型判定</text>
+  <text x="52" y="272" font-size="11" fill="#64748b">console.py:787 _detect</text>
+  <rect x="250" y="226" width="1080" height="62" rx="6" fill="#f0fdfa" stroke="#99f6e4"/>
+  <text x="264" y="248" font-size="12" fill="#0f172a">随机森林 120 树（n_jobs=1）逐事件 predict_proba，4.26 ms/事件，输出三元组：判定标签、异常概率、决策间隔 margin（top1−top2）。</text>
+  <text x="264" y="270" font-size="12" fill="#475569">margin 是本周期内唯一的新增加固读数：它既进鲁棒性滚动窗口，也作为低置信事件的复查触发器。上线准确率 0.9981（8000 行训练集，实测）。</text>
+
+  <!-- lane: explainability -->
+  <rect x="40" y="302" width="200" height="70" rx="6" fill="#0f766e"/>
+  <text x="52" y="328" font-size="13" font-weight="700" fill="#ffffff">支柱一 可解释性</text>
+  <text x="52" y="348" font-size="11" fill="#ccfbf1">console.py:848</text>
+  <rect x="250" y="302" width="1080" height="70" rx="6" fill="#fffbeb" stroke="#fcd34d"/>
+  <text x="264" y="324" font-size="12" fill="#0f172a">对每条告警做 LIME 加权线性归因，18.1~23.1 ms/条（n_samples 120~400，自研实现），取贡献度前 3 的特征与正负方向。</text>
+  <text x="264" y="346" font-size="12" fill="#475569">输出直接进入告警表最后一列，运维侧读到的是判定依据的业务语句，而不是特征编号。</text>
+  <text x="264" y="364" font-size="12" fill="#475569">作用：判定可复核、误报可定位；不参与本周期内的模型参数修改。</text>
+
+  <!-- lane: robustness -->
+  <rect x="40" y="386" width="200" height="70" rx="6" fill="#0f766e"/>
+  <text x="52" y="412" font-size="13" font-weight="700" fill="#ffffff">支柱二 鲁棒性</text>
+  <text x="52" y="432" font-size="11" fill="#ccfbf1">console.py:139 阈值 0.20</text>
+  <rect x="250" y="386" width="1080" height="70" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="264" y="408" font-size="12" fill="#0f172a">在线侧：margin 进入长度 60 的滚动窗口，robust_rate = margin ≥ 0.20 的占比，窗口内即时给出「当前判定是否可信」的比例。</text>
+  <text x="264" y="430" font-size="12" fill="#475569">离线侧：worker 预计算 FGSM 精度—ε 曲线并叠加显示；加固（对抗训练重训）不在本周期执行，见图 2 的修正回路。</text>
+  <text x="264" y="450" font-size="12" fill="#b45309">越限判据：robust_rate 连续下降或 margin 分布左移，作为触发离线加固的信号之一。</text>
+
+  <!-- lane: fairness -->
+  <rect x="40" y="470" width="200" height="70" rx="6" fill="#0f766e"/>
+  <text x="52" y="496" font-size="13" font-weight="700" fill="#ffffff">支柱三 公平性</text>
+  <text x="52" y="516" font-size="11" fill="#ccfbf1">console.py:140 阈值 0.15</text>
+  <rect x="250" y="470" width="1080" height="70" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="264" y="492" font-size="12" fill="#0f172a">按 agent 累积事件数与检出数，实时检测率取 max−min 作为群体平价差距；差距超过 0.15 记为不公平读数并在卡片高亮。</text>
+  <text x="264" y="514" font-size="12" fill="#475569">该支柱只做分组计量与越限提示，修正动作（重加权、阈值再校准、分组补采样）交由离线评估阶段决定并进入修正回路。</text>
+  <text x="264" y="534" font-size="12" fill="#475569">同一机制在回归型数据集上改为按平台分组统计 MAE 差，判据口径与分类型一致。</text>
+
+  <!-- lane: privacy -->
+  <rect x="40" y="554" width="200" height="70" rx="6" fill="#0f766e"/>
+  <text x="52" y="580" font-size="13" font-weight="700" fill="#ffffff">支柱四 隐私</text>
+  <text x="52" y="600" font-size="11" fill="#ccfbf1">姿态 + 离线记账</text>
+  <rect x="250" y="554" width="1080" height="70" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="264" y="576" font-size="12" fill="#0f172a">本周期内不训练、不外传：事件特征只在本机推理，原始采集不出站；卡片显示推理姿态与离线成员推断 AUC。</text>
+  <text x="264" y="598" font-size="12" fill="#475569">隐私预算的消耗与 DP-SGD、FedAvg 的训练都在周期外进行（图 2、图 3），避免在 500 ms 窗口内做迭代优化。</text>
+  <text x="264" y="618" font-size="12" fill="#475569">实测成员推断 AUC 0.48~0.53（30 个模型×数据集组合中位 0.5109），与随机猜测无实质差距；口径与改进见结论说明。</text>
+
+  <!-- lane: output -->
+  <rect x="40" y="638" width="200" height="56" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="52" y="664" font-size="13" font-weight="700" fill="#0f172a">输出与落盘</text>
+  <text x="52" y="684" font-size="11" fill="#64748b">refresh 每 tick 一次</text>
+  <rect x="250" y="638" width="1080" height="56" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="264" y="662" font-size="12" fill="#0f172a">速率图推送本 tick 均值、事件表与告警表按上限截断保留、三张支柱卡片刷新。全部落在余量段内，不构成周期瓶颈。</text>
+  <text x="264" y="682" font-size="12" fill="#475569">下一个 QTimer 触发时，上一周期的统计窗口已经带上新读数，监测是连续累积而非单帧快照。</text>
+
+  <!-- footer -->
+  <line x1="40" y1="716" x2="1400" y2="716" stroke="#cbd5e1"/>
+  <text x="40" y="738" font-size="12" font-weight="700" fill="#0f172a">分工小结</text>
+  <text x="120" y="738" font-size="12" fill="#475569">可解释性与鲁棒性在周期内产出逐事件读数；公平性在周期内产出分组累积统计；隐私在周期内只维持姿态与记账。四支柱的修正动作全部在周期外执行。</text>
+  <text x="40" y="762" font-size="11" fill="#64748b">读数来源：控制台 normal 档实测，120 树随机森林、8000 行训练集、单 tick 8 事件。500 ms 为该档演示周期，非 Near-RT RIC 规范值（规范区间 10 ms~1 s）。</text>
+  <text x="40" y="784" font-size="11" fill="#64748b">单事件判定 4.26 ms、逐事件归因 18.1~23.1 ms、8 事件合计 177.6 ms 均为同轮次实测；同图不展示跨模型读数，跨模型实时性见结论说明的区间表。</text>
+</svg>
